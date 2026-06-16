@@ -146,13 +146,22 @@
                 <textarea rows="4" placeholder="Tell me a bit about your weight loss goals or any current health struggles..." class="p-3.5 rounded-xl w-full focus:outline-emerald-500"></textarea>
                 <button type="submit" class="w-full bg-emerald-600 text-white font-bold py-4 rounded-xl hover:bg-emerald-500 transition text-lg shadow-lg">Submit Consultation Request</button>
             </form>
-<div style="max-width: 400px; margin: 0 auto; padding: 10px;">
 
-   <div id="paypal-container-J9R9TRFANTSYA"></div>
-   <script src="https://www.paypal.com/sdk/js..."></script>
-   <script>HostedButtons({...})</script>
+</div> 
+</form>
+
+<div style="max-width: 400px; margin: 0 auto; padding: 10px;">
+  <div id="paypal-container-J9R9TRFANTSYA"></div>
+  <script src="https://www.paypal.com/sdk/js?client-id=ba6k4G5D7xq8vD865vORt07huetPCSyEe_0oVJGEpILCEGa1GXSFAF1ff9f9pt6bF5SWYISOIHg&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+  <script>
+    PayPal.HostedButtons({
+      hostedButtonId: "J9R9TRFANTSYA",
+    }).render("#paypal-container-J9R9TRFANTSYA");
+  </script>
+</div>
 
 </div>
+</section>   
     </section>
 <section id="policies" style="padding: 60px 20px; background-color: #f9f9f9; text-align: left; max-width: 1200px; margin: 0 auto;">
     <div style="font-family: sans-serif; color: #333; line-height: 1.6;">
