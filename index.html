@@ -5,86 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HealthLife | Professional Healthcare Consultation & Marketplace Navigation</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            cream: '#fcfaf6',      /* Exact warm cream background from your logo */
+                            gold: '#c5a059',       /* Elegant gold accent */
+                            goldDark: '#b38f46',   /* Deep gold for hover states/buttons */
+                            green: '#13693b',      /* Rich green from the leaves */
+                            greenDark: '#0e522d',  /* Dark forest green for headers/text */
+                            charcoal: '#2c332e'    /* Soft dark charcoal-green for body text */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+<body class="bg-brand-cream text-brand-charcoal font-sans antialiased">
 
-    <!-- HEADER -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            
-<img src="images/Healthlife_icon.jpeg" alt="HealthLife Logo" class="h-10 w-auto">
-            <div class="text-2xl font-bold text-blue-700 tracking-wide">
-            <div class="text-2xl font-bold text-blue-700 tracking-wide">
+            <a href="#" class="flex items-center">
+                <img src="images/Healthlife_icon.jpeg" alt="HealthLife Logo" class="h-12 w-auto">
+            </a>
             <nav class="hidden md:flex space-x-8 font-medium">
-                <a href="#about" class="text-slate-600 hover:text-blue-700 transition">What We Do</a>
-                <a href="#services" class="text-slate-600 hover:text-blue-700 transition">Marketplace Options</a>
-                <a href="#carriers" class="text-slate-600 hover:text-blue-700 transition">Top Carriers</a>
-                <a href="#contact" class="text-slate-600 hover:text-blue-700 transition">Contact</a>
+                <a href="#about" class="text-brand-charcoal hover:text-brand-green transition">What We Do</a>
+                <a href="#services" class="text-brand-charcoal hover:text-brand-green transition">Marketplace Options</a>
+                <a href="#carriers" class="text-brand-charcoal hover:text-brand-green transition">Top Carriers</a>
+                <a href="#contact" class="text-brand-charcoal hover:text-brand-green transition">Contact</a>
             </nav>
-            <a href="#contact" class="bg-blue-700 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-blue-800 transition hidden md:inline-block">Book a Strategy Session</a>
+            <a href="#contact" class="bg-brand-green text-white px-5 py-2.5 rounded-full font-semibold hover:bg-brand-greenDark transition hidden md:inline-block shadow-sm">Book a Strategy Session</a>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="bg-gradient-to-br from-blue-50 via-white to-slate-50 py-20 px-6">
+    <section class="bg-gradient-to-br from-[#f7f3eb] via-brand-cream to-white py-20 px-6">
         <div class="max-w-5xl mx-auto text-center">
-            <span class="text-blue-700 font-bold tracking-wider uppercase text-sm bg-blue-50 px-4 py-1.5 rounded-full">Independent Marketplace Consultants</span>
-            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mt-6 leading-tight">
-                Simplifying Healthcare. <br><span class="text-blue-700">Maximizing Your Coverage.</span>
+            <span class="text-brand-greenDark font-bold tracking-wider uppercase text-sm bg-[#e2efe7] px-4 py-1.5 rounded-full border border-brand-green/10">Independent Marketplace Consultants</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-brand-greenDark mt-6 leading-tight">
+                Simplifying Healthcare. <br><span class="text-brand-gold">Maximizing Your Coverage.</span>
             </h1>
-            <p class="text-lg md:text-xl text-slate-600 mt-6 max-w-3xl mx-auto leading-relaxed">
+            <p class="text-lg md:text-xl text-brand-charcoal/80 mt-6 max-w-3xl mx-auto leading-relaxed">
                 We don't believe in one-size-fits-all medical plans. Our independent consultants shop the health marketplace on your behalf, comparing options from the country's top-tier healthcare companies to secure the best available coverage for your family or business.
             </p>
             <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#services" class="bg-blue-700 text-white px-8 py-3.5 rounded-full font-bold text-lg hover:bg-blue-800 shadow-md transition text-center">Compare Marketplace Plans</a>
-                <a href="#contact" class="bg-white text-slate-700 border border-slate-300 px-8 py-3.5 rounded-full font-bold text-lg hover:bg-slate-50 transition text-center">Get a Free Rate Quote</a>
+                <a href="#services" class="bg-brand-green text-white px-8 py-3.5 rounded-full font-bold text-lg hover:bg-brand-greenDark shadow-md transition text-center">Compare Marketplace Plans</a>
+                <a href="#contact" class="bg-white text-brand-greenDark border border-brand-gold/40 px-8 py-3.5 rounded-full font-bold text-lg hover:bg-brand-cream transition text-center shadow-sm">Get a Free Rate Quote</a>
             </div>
             
-            <!-- Company Logo Image Container -->
-            <div class="mt-12 max-w-xl mx-auto rounded-2xl overflow-hidden shadow-md bg-white p-4 border border-slate-100">
-           <img src="images/Healthlife_icon.jpeg" alt="HealthLife Logo" class="h-65 w-auto mx-auto my-6 rounded-lg shadow-md">
+            <div class="mt-12 max-w-xl mx-auto rounded-2xl overflow-hidden shadow-xl bg-white p-6 border border-brand-gold/20">
+                <img src="images/Healthlife_icon.jpeg" alt="HealthLife Logo" class="h-64 w-auto mx-auto rounded-lg">
             </div>
         </div>
     </section>
 
-    <!-- CRITICAL DISCLAIMER BANNER -->
-    <div class="bg-blue-900 text-white py-4 px-6 text-center text-sm font-medium">
+    <div class="bg-brand-greenDark text-brand-cream py-4 px-6 text-center text-sm font-medium border-y border-brand-gold/20">
         <div class="max-w-5xl mx-auto">
-            <span class="bg-blue-500 text-white text-xs font-bold px-2 py-0.5 rounded mr-2 uppercase">Notice</span> 
+            <span class="bg-brand-gold text-brand-greenDark text-xs font-bold px-2 py-0.5 rounded mr-2 uppercase">Notice</span> 
             HealthLife is an independent advisory and consulting firm. We are not a medical facility, clinic, or healthcare provider. We do not provide clinical treatment, medical advice, or direct patient care.
         </div>
     </div>
 
-    <!-- VALUE PROPOSITION / FEATURES -->
     <section id="about" class="py-20 px-6 max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-3xl font-bold text-slate-900">Why Navigate the Market Alone?</h2>
-            <p class="text-slate-600 mt-4 text-lg">Finding the right health balance shouldn't require an administrative degree. We do the heavy lifting for you.</p>
+            <h2 class="text-3xl font-bold text-brand-greenDark">Why Navigate the Market Alone?</h2>
+            <p class="text-brand-charcoal/80 mt-4 text-lg">Finding the right health balance shouldn't require an administrative degree. We do the heavy lifting for you.</p>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                <div class="w-12 h-12 bg-blue-50 text-blue-700 rounded-xl flex items-center justify-center font-bold text-xl mb-6">✓</div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">Market Shopping</h3>
-                <p class="text-slate-600 leading-relaxed">We sift through hundreds of local and national marketplace structures to isolate hidden cost efficiencies and optimized premium tiers.</p>
+            <div class="bg-white p-8 rounded-2xl shadow-md border border-brand-gold/10 hover:border-brand-gold/40 transition">
+                <div class="w-12 h-12 bg-[#e2efe7] text-brand-green rounded-xl flex items-center justify-center font-bold text-xl mb-6">✓</div>
+                <h3 class="text-xl font-bold text-brand-greenDark mb-3">Market Shopping</h3>
+                <p class="text-brand-charcoal/80 leading-relaxed">We sift through hundreds of local and national marketplace structures to isolate hidden cost efficiencies and optimized premium tiers.</p>
             </div>
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                <div class="w-12 h-12 bg-blue-50 text-blue-700 rounded-xl flex items-center justify-center font-bold text-xl mb-6">✓</div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">Top-Tier Carriers</h3>
-                <p class="text-slate-600 leading-relaxed">We work across the landscape of elite, household-name health insurance companies, ensuring you gain access to stable networks and premium doctors.</p>
+            <div class="bg-white p-8 rounded-2xl shadow-md border border-brand-gold/10 hover:border-brand-gold/40 transition">
+                <div class="w-12 h-12 bg-[#fdf5e6] text-brand-gold rounded-xl flex items-center justify-center font-bold text-xl mb-6">✓</div>
+                <h3 class="text-xl font-bold text-brand-greenDark mb-3">Top-Tier Carriers</h3>
+                <p class="text-brand-charcoal/80 leading-relaxed">We work across the landscape of elite, household-name health insurance companies, ensuring you gain access to stable networks and premium doctors.</p>
             </div>
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                <div class="w-12 h-12 bg-blue-50 text-blue-700 rounded-xl flex items-center justify-center font-bold text-xl mb-6">✓</div>
-                <h3 class="text-xl font-bold text-slate-900 mb-3">Provider Connection</h3>
-                <p class="text-slate-600 leading-relaxed">Once your roadmap is built, we introduce you directly to the licensed healthcare networks and professional providers in your designated area.</p>
+            <div class="bg-white p-8 rounded-2xl shadow-md border border-brand-gold/10 hover:border-brand-gold/40 transition">
+                <div class="w-12 h-12 bg-[#e2efe7] text-brand-green rounded-xl flex items-center justify-center font-bold text-xl mb-6">✓</div>
+                <h3 class="text-xl font-bold text-brand-greenDark mb-3">Provider Connection</h3>
+                <p class="text-brand-charcoal/80 leading-relaxed">Once your roadmap is built, we introduce you directly to the licensed healthcare networks and professional providers in your designated area.</p>
             </div>
         </div>
     </section>
 
-    <!-- CARRIER LOGO PLACEHOLDER SECTION -->
-    <section id="carriers" class="bg-slate-100 py-12 px-6 border-y border-slate-200">
+    <section id="carriers" class="bg-white py-12 px-6 border-y border-brand-gold/20">
         <div class="max-w-5xl mx-auto text-center">
-            <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">Analyzing Options From The Country’s Leading Healthcare Systems</p>
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 font-semibold text-slate-600 tracking-wider">
+            <p class="text-xs font-bold uppercase tracking-widest text-brand-gold mb-6">Analyzing Options From The Country’s Leading Healthcare Systems</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 font-semibold text-brand-greenDark tracking-wider">
                 <span>BCBS OPTIONS</span>
                 <span>UNITED NETWORKS</span>
                 <span>AETNA STRUCTURES</span>
@@ -94,54 +105,49 @@
         </div>
     </section>
 
-    <!-- LOAD PAYPAL SDK ONCE -->
     <script src="https://www.paypal.com/sdk/js?client-id=BAAidRbXk4G5D7xq8vD865vORt07huetPC5yEe_0oVJGEpILCEGaiGXSFAF1ff9f9pt6bF5SWYISOIHgH4&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
 
-    <!-- SOLUTIONS, PACKAGES, & PAYMENTS -->
-    <section id="services" class="py-20 px-6 bg-slate-50">
+    <section id="services" class="py-20 px-6 bg-[#f5f1e9]">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold text-slate-900">Consulting Packages & Informational Analysis</h2>
-                <p class="text-slate-600 mt-4 text-lg">Clear, fee-based independent consulting plans to help layout your options seamlessly.</p>
+                <h2 class="text-3xl font-bold text-brand-greenDark">Consulting Packages & Informational Analysis</h2>
+                <p class="text-brand-charcoal/80 mt-4 text-lg">Clear, fee-based independent consulting plans to help layout your options seamlessly.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <!-- Package 1 -->
-                <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
                     <div>
-                        <span class="text-xs font-bold tracking-widest text-blue-700 uppercase bg-blue-50 px-3 py-1 rounded-full">Individual / Family</span>
-                        <h3 class="text-2xl font-bold text-slate-900 mt-4">Marketplace Coverage Analysis</h3>
-                        <p class="text-slate-600 mt-4 mb-6">A complete comparative diagnostic evaluating regional public and private options to discover premium optimizations for your home address.</p>
-                        <ul class="space-y-3 text-slate-600 border-t border-slate-100 pt-6 mb-8">
-                            <li class="flex items-center"><span class="text-blue-600 mr-2">✓</span> Deep shopping analysis across top national carriers</li>
-                            <li class="flex items-center"><span class="text-blue-600 mr-2">✓</span> Subsidy qualification check & network validation</li>
-                            <li class="flex items-center"><span class="text-blue-600 mr-2">✓</span> 1-on-1 plan review video consultation call</li>
+                        <span class="text-xs font-bold tracking-widest text-brand-green uppercase bg-[#e2efe7] px-3 py-1 rounded-full border border-brand-green/10">Individual / Family</span>
+                        <h3 class="text-2xl font-bold text-brand-greenDark mt-4">Marketplace Coverage Analysis</h3>
+                        <p class="text-brand-charcoal/80 mt-4 mb-6">A complete comparative diagnostic evaluating regional public and private options to discover premium optimizations for your home address.</p>
+                        <ul class="space-y-3 text-brand-charcoal/90 border-t border-brand-cream pt-6 mb-8">
+                            <li class="flex items-center"><span class="text-brand-green mr-2 font-bold">✓</span> Deep shopping analysis across top national carriers</li>
+                            <li class="flex items-center"><span class="text-brand-green mr-2 font-bold">✓</span> Subsidy qualification check & network validation</li>
+                            <li class="flex items-center"><span class="text-brand-green mr-2 font-bold">✓</span> 1-on-1 plan review video consultation call</li>
                         </ul>
                     </div>
                     
-                    <!-- Clean, Compact PayPal Container Tier 1 -->
-                    <div class="mt-auto pt-4 border-t border-slate-100">
-                        <p class="text-xs font-semibold text-slate-400 mb-3 text-center uppercase tracking-wider">Secure Analysis Session</p>
+                    <div class="mt-auto pt-4 border-t border-brand-cream">
+                        <p class="text-xs font-semibold text-brand-gold mb-3 text-center uppercase tracking-wider">Secure Analysis Session</p>
                         <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-J9R9TRFANTSYA"></div>
                     </div>
                 </div>
 
-                <!-- Package 2 -->
-                <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-brand-gold/20 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-brand-gold text-white text-[10px] font-bold px-6 py-1 uppercase tracking-widest rotate-45 translate-x-5 translate-y-3">Premium</div>
                     <div>
-                        <span class="text-xs font-bold tracking-widest text-emerald-700 uppercase bg-emerald-50 px-3 py-1 rounded-full">Concierge Service</span>
-                        <h3 class="text-2xl font-bold text-slate-900 mt-4">Provider Placement Concierge</h3>
-                        <p class="text-slate-600 mt-4 mb-6">For clients seeking high-end primary care matches, direct primary care relationships, or coordination across distinct medical networks without wait times.</p>
-                        <ul class="space-y-3 text-slate-600 border-t border-slate-100 pt-6 mb-8">
-                            <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Comprehensive verification of local doctor intake options</li>
-                            <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Secure hand-off coordination to authorized medical networks</li>
-                            <li class="flex items-center"><span class="text-emerald-600 mr-2">✓</span> Administrative document portfolio arrangement</li>
+                        <span class="text-xs font-bold tracking-widest text-brand-goldDark uppercase bg-[#fdf5e6] px-3 py-1 rounded-full border border-brand-gold/20">Concierge Service</span>
+                        <h3 class="text-2xl font-bold text-brand-greenDark mt-4">Provider Placement Concierge</h3>
+                        <p class="text-brand-charcoal/80 mt-4 mb-6">For clients seeking high-end primary care matches, direct primary care relationships, or coordination across distinct medical networks without wait times.</p>
+                        <ul class="space-y-3 text-brand-charcoal/90 border-t border-brand-cream pt-6 mb-8">
+                            <li class="flex items-center"><span class="text-brand-gold mr-2 font-bold">✓</span> Comprehensive verification of local doctor intake options</li>
+                            <li class="flex items-center"><span class="text-brand-gold mr-2 font-bold">✓</span> Secure hand-off coordination to authorized medical networks</li>
+                            <li class="flex items-center"><span class="text-brand-gold mr-2 font-bold">✓</span> Administrative document portfolio arrangement</li>
                         </ul>
                     </div>
                     
-                    <!-- Clean, Compact PayPal Container Tier 2 -->
-                    <div class="mt-auto pt-4 border-t border-slate-100">
-                        <p class="text-xs font-semibold text-slate-400 mb-3 text-center uppercase tracking-wider">Secure Concierge Session</p>
+                    <div class="mt-auto pt-4 border-t border-brand-cream">
+                        <p class="text-xs font-semibold text-brand-gold mb-3 text-center uppercase tracking-wider">Secure Concierge Session</p>
                         <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-BXQAN8JY42M8U"></div>
                     </div>
                 </div>
@@ -149,7 +155,6 @@
         </div>
     </section>
 
-    <!-- INITIATE BOTH PAYPAL BUTTONS WITH CLEAN RESTRICTIONS -->
     <script>
         if (window.paypal) {
             // Package 1 Button
@@ -164,47 +169,44 @@
         }
     </script>
     
-    <!-- CONTACT & FORM SECTION -->
-    <section id="contact" class="bg-slate-900 text-white py-20 px-6">
+    <section id="contact" class="bg-brand-greenDark text-white py-20 px-6 border-t border-brand-gold/30">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold">Request a Marketplace Assessment</h2>
-            <p class="text-slate-400 mt-4 max-w-lg mx-auto">Let our independent consultants evaluate coverage structures to find optimized avenues in your home area.</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-cream">Request a Marketplace Assessment</h2>
+            <p class="text-brand-cream/70 mt-4 max-w-lg mx-auto">Let our independent consultants evaluate coverage structures to find optimized avenues in your home area.</p>
             
-            <form class="mt-10 max-w-xl mx-auto space-y-4 text-left text-slate-900" onsubmit="event.preventDefault(); alert('Consultation inquiry logged. A non-clinical health navigation expert will touch base soon.');">
+            <form class="mt-10 max-w-xl mx-auto space-y-4 text-left text-brand-charcoal" onsubmit="event.preventDefault(); alert('Consultation inquiry logged. A non-clinical health navigation expert will touch base soon.');">
                 <div class="grid grid-cols-2 gap-4">
-                    <input type="text" placeholder="First Name" required class="p-3.5 rounded-xl w-full focus:outline-blue-500">
-                    <input type="email" placeholder="Email Address" required class="p-3.5 rounded-xl w-full focus:outline-blue-500">
+                    <input type="text" placeholder="First Name" required class="p-3.5 rounded-xl w-full focus:outline-brand-gold bg-brand-cream/95">
+                    <input type="email" placeholder="Email Address" required class="p-3.5 rounded-xl w-full focus:outline-brand-gold bg-brand-cream/95">
                 </div>
-                <select class="p-3.5 rounded-xl w-full text-slate-500 focus:outline-blue-500 bg-white" required>
+                <select class="p-3.5 rounded-xl w-full text-brand-charcoal/70 focus:outline-brand-gold bg-brand-cream/95" required>
                     <option value="">What type of coverage layout do you need?</option>
                     <option value="marketplace">Individual/Family Marketplace Comparison</option>
                     <option value="top-carrier">Top National Carrier Evaluation</option>
                     <option value="provider-match">Local Care Provider Referrals</option>
                 </select>
-                <textarea rows="4" placeholder="Briefly specify your general geographic region and current coverage logistics objectives (Please omit personal, private diagnostic or medical conditions)..." class="p-3.5 rounded-xl w-full focus:outline-blue-500" required></textarea>
-                <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-500 transition text-lg shadow-lg">Submit Consulting Request</button>
+                <textarea rows="4" placeholder="Briefly specify your general geographic region and current coverage logistics objectives (Please omit personal, private diagnostic or medical conditions)..." class="p-3.5 rounded-xl w-full focus:outline-brand-gold bg-brand-cream/95" required></textarea>
+                <button type="submit" class="w-full bg-brand-gold text-brand-greenDark font-bold py-4 rounded-xl hover:bg-brand-goldDark transition text-lg shadow-lg">Submit Consulting Request</button>
             </form>
         </div> 
     </section>
 
-    <!-- POLICIES & TERMS -->
-    <section id="policies" class="py-16 px-6 max-w-7xl mx-auto bg-slate-50">
-        <div class="font-sans text-slate-700 line-height-relaxed max-w-4xl mx-auto">
-            <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wide mb-4">Consultation Advisory Scope & Terms</h2>
-            <p class="text-xs text-slate-600 mb-4">
+    <section id="policies" class="py-16 px-6 max-w-7xl mx-auto bg-brand-cream">
+        <div class="font-sans text-brand-charcoal/80 line-height-relaxed max-w-4xl mx-auto border-t border-brand-gold/20 pt-8">
+            <h2 class="text-sm font-bold text-brand-greenDark uppercase tracking-wide mb-4">Consultation Advisory Scope & Terms</h2>
+            <p class="text-xs mb-4">
                 HealthLife Consulting delivers administrative platform matching, marketplace plan layout evaluations, and operational strategy assistance. Because our deliveries center around immediately finalized intellectual evaluation reports and data structures, all consultant booking metrics are completely non-refundable.
             </p>
-            <ul class="list-disc pl-5 space-y-2 text-xs text-slate-600">
+            <ul class="list-disc pl-5 space-y-2 text-xs">
                 <li><strong>No Medical Services Relationship:</strong> Consultants do not diagnose symptoms, prescribe therapeutics, or manage treatments. All clinical care questions must be posed directly to authorized medical doctors.</li>
                 <li><strong>No Direct Underwriting Binding:</strong> HealthLife provides exploratory informational reviews of top national carriers. Plan bounds, premium ratings, and eventual coverage acceptance metrics are governed strictly by individual contract policies signed with those medical companies.</li>
             </ul>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-slate-950 text-slate-500 text-center py-8 border-t border-slate-900 text-sm">
+    <footer class="bg-[#0b3c22] text-brand-cream/50 text-center py-8 border-t border-brand-greenDark text-sm">
         <p>&copy; 2026 HealthLife Consulting. All rights reserved.</p>
-        <p class="mt-2 text-xs text-slate-600 px-4 max-w-4xl mx-auto">
+        <p class="mt-2 text-xs text-brand-cream/40 px-4 max-w-4xl mx-auto">
             Disclaimer: HealthLife functions solely as a marketplace information broker and coordination consult portal. We explicitly disclaim any position as a hospital network, emergency treatment clearinghouse, or clinic. For acute health updates or medical dilemmas, coordinate promptly with local professional emergency personnel or your primary clinician.
         </p>
     </footer>
