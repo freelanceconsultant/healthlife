@@ -23,10 +23,22 @@
             }
         }
     </script>
+    <style>
+        /* Smooth transition for the policy toggles */
+        .policy-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+        .policy-content.open {
+            max-height: 2000px;
+            transition: max-height 0.5s ease-in, padding 0.5s ease-in;
+        }
+    </style>
 </head>
 <body class="bg-brand-cream text-brand-charcoal font-sans antialiased">
 
-<header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             
             <div class="flex items-center space-x-3">
@@ -38,6 +50,7 @@
                 <a href="#services" class="hover:text-emerald-600 transition">Services</a>
                 <a href="#about" class="hover:text-emerald-600 transition">About Us</a>
                 <a href="#contact" class="hover:text-emerald-600 transition">Contact</a>
+                <a href="#legal-docs" class="hover:text-emerald-600 transition">Policies</a>
             </nav>
 
             <div class="hidden md:block">
@@ -47,7 +60,9 @@
             </div>
 
         </div>
-    </header>    <section class="bg-gradient-to-br from-[#f7f3eb] via-brand-cream to-white py-20 px-6">
+    </header>
+
+    <section class="bg-gradient-to-br from-[#f7f3eb] via-brand-cream to-white py-20 px-6">
         <div class="max-w-5xl mx-auto text-center">
             <span class="text-brand-greenDark font-bold tracking-wider uppercase text-sm bg-[#e2efe7] px-4 py-1.5 rounded-full border border-brand-green/10">Independent Marketplace Consultants</span>
             <h1 class="text-4xl md:text-6xl font-extrabold text-brand-greenDark mt-6 leading-tight">
@@ -121,6 +136,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Package 1 -->
                 <div class="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
                     <div>
                         <span class="text-xs font-bold tracking-widest text-brand-green uppercase bg-[#e2efe7] px-3 py-1 rounded-full border border-brand-green/10">Individual / Family</span>
@@ -133,12 +149,22 @@
                         </ul>
                     </div>
                     
-                    <div class="mt-auto pt-4 border-t border-brand-cream">
-                        <p class="text-xs font-semibold text-brand-gold mb-3 text-center uppercase tracking-wider">Secure Analysis Session</p>
-                        <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-J9R9TRFANTSYA"></div>
+                    <div class="mt-auto pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                        <!-- Strict Anti-Refund Checkbox Protection -->
+                        <div class="mb-4 flex items-start">
+                            <input type="checkbox" id="agree-pkg1" class="mt-1 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green" onchange="togglePaypalButton('pkg1')">
+                            <label for="agree-pkg1" class="text-[11px] text-brand-charcoal/80 leading-tight cursor-pointer">
+                                I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>. I acknowledge services are fully delivered immediately via digital analysis tools.
+                            </label>
+                        </div>
+                        <div id="wrapper-pkg1" class="opacity-40 pointer-events-none transition-all duration-300">
+                            <p class="text-xs font-semibold text-brand-gold mb-3 text-center uppercase tracking-wider">Secure Analysis Session</p>
+                            <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-J9R9TRFANTSYA"></div>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Package 2 -->
                 <div class="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-brand-gold/20 flex flex-col justify-between relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-brand-gold text-white text-[10px] font-bold px-6 py-1 uppercase tracking-widest rotate-45 translate-x-5 translate-y-3">Premium</div>
                     <div>
@@ -152,9 +178,18 @@
                         </ul>
                     </div>
                     
-                    <div class="mt-auto pt-4 border-t border-brand-cream">
-                        <p class="text-xs font-semibold text-brand-gold mb-3 text-center uppercase tracking-wider">Secure Concierge Session</p>
-                        <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-BXQAN8JY42M8U"></div>
+                    <div class="mt-auto pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                        <!-- Strict Anti-Refund Checkbox Protection -->
+                        <div class="mb-4 flex items-start">
+                            <input type="checkbox" id="agree-pkg2" class="mt-1 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green" onchange="togglePaypalButton('pkg2')">
+                            <label for="agree-pkg2" class="text-[11px] text-brand-charcoal/80 leading-tight cursor-pointer">
+                                I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>. I acknowledge services are fully delivered immediately via digital analysis tools.
+                            </label>
+                        </div>
+                        <div id="wrapper-pkg2" class="opacity-40 pointer-events-none transition-all duration-300">
+                            <p class="text-xs font-semibold text-brand-gold mb-3 text-center uppercase tracking-wider">Secure Concierge Session</p>
+                            <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-BXQAN8JY42M8U"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -172,6 +207,17 @@
             paypal.HostedButtons({
                 hostedButtonId: "BXQAN8JY42M8U",
             }).render("#paypal-container-BXQAN8JY42M8U");
+        }
+
+        // Anti-fraud interactive toggle script
+        function togglePaypalButton(pkg) {
+            const checkbox = document.getElementById('agree-' + pkg);
+            const wrapper = document.getElementById('wrapper-' + pkg);
+            if (checkbox.checked) {
+                wrapper.classList.remove('opacity-40', 'pointer-events-none');
+            } else {
+                wrapper.classList.add('opacity-40', 'pointer-events-none');
+            }
         }
     </script>
     
@@ -197,13 +243,73 @@
         </div> 
     </section>
 
-    <section id="policies" class="py-16 px-6 max-w-7xl mx-auto bg-brand-cream">
-        <div class="font-sans text-brand-charcoal/80 line-height-relaxed max-w-4xl mx-auto border-t border-brand-gold/20 pt-8">
-            <h2 class="text-sm font-bold text-brand-greenDark uppercase tracking-wide mb-4">Consultation Advisory Scope & Terms</h2>
-            <p class="text-xs mb-4">
-                HealthLife Consulting delivers administrative platform matching, marketplace plan layout evaluations, and operational strategy assistance. Because our deliveries center around immediately finalized intellectual evaluation reports and data structures, all consultant booking metrics are completely non-refundable.
-            </p>
-            <ul class="list-disc pl-5 space-y-2 text-xs">
+    <!-- Professional Interactive Legal Docs Section -->
+    <section id="legal-docs" class="py-16 px-6 max-w-4xl mx-auto bg-brand-cream">
+        <div class="border-t border-brand-gold/20 pt-8">
+            <h2 class="text-sm font-bold text-brand-greenDark uppercase tracking-wide mb-6 text-center">Corporate Governance & Compliance Policies</h2>
+            
+            <!-- Accordion 1: Terms of Service -->
+            <div class="border border-brand-gold/20 rounded-xl mb-4 bg-white shadow-sm overflow-hidden">
+                <button onclick="togglePolicy('tos')" class="w-full text-left p-5 font-bold text-brand-greenDark flex justify-between items-center hover:bg-slate-50 transition">
+                    <span>1. Terms of Service & Strict No-Refund Policy</span>
+                    <span id="icon-tos" class="text-brand-gold text-xl">+</span>
+                </button>
+                <div id="content-tos" class="policy-content px-6 text-xs text-brand-charcoal/80 space-y-4 leading-relaxed">
+                    <p class="font-semibold text-gray-500 pt-2">Last Updated: June 17, 2026</p>
+                    <p>Welcome to HealthLife Consulting (referred to below as "HealthLife," "we," "us," or "our"). By purchasing, accessing, or utilizing our Marketplace Coverage Analysis, Provider Placement Concierge, or any other fee-based informational consulting packages (collectively, the "Services"), you ("Client" or "you") agree to be bound by these Terms of Service. If you do not agree to these terms, do not purchase or use our Services.</p>
+                    
+                    <h4 class="font-bold text-brand-greenDark text-sm">A. Scope of Consulting Services & Intellectual Property</h4>
+                    <p>HealthLife provides independent, fee-based administrative platform matching, marketplace plan layout evaluations, and operational strategy assistance. Our deliverables consist entirely of custom informational analysis, custom report structuring, data layouts, and digital consultation time. Because our Services involve the immediate delivery of custom intellectual property, proprietary analysis, and dedicated professional labor hours, <strong>all services are deemed fully rendered and delivered immediately upon provision.</strong></p>
+                    
+                    <h4 class="font-bold text-brand-greenDark text-sm">B. Strict No-Refund Policy</h4>
+                    <p class="bg-red-50 p-3 rounded-lg border border-red-100 text-brand-charcoal">
+                        <strong>All sales are final. HealthLife operates under a strict NO REFUNDS policy.</strong> By submitting payment, you acknowledge and agree that our consulting assets, customized analysis, and labor time are immediately deployed on your behalf. Therefore, no refunds, partial refunds, or cancellations will be issued for any reason, including but not limited to: change of mind, dissatisfaction with available regional insurance options, or non-qualification for external subsidies.
+                    </p>
+                    
+                    <h4 class="font-bold text-brand-greenDark text-sm">C. Chargebacks and Reversals</h4>
+                    <p>Client explicitly agrees not to initiate any chargeback, payment dispute, or reversal request with their credit card company, bank, or payment processor (such as PayPal, Stripe, or any merchant of record). If a chargeback is initiated in violation of this agreement, Client agrees to be liable for all costs incurred by HealthLife in responding to and defending the dispute, including administrative fees and legal expenses.</p>
+                    
+                    <h4 class="font-bold text-brand-greenDark text-sm">D. Absolute Disclaimers (No Medical or Underwriting Relationship)</h4>
+                    <p><strong>No Medical Advice:</strong> HealthLife is an independent advisory firm. We are not a medical facility, clinic, health insurance carrier, or healthcare provider. We do not provide clinical treatment, diagnoses, medical advice, or direct patient care. All clinical questions must be directed to a licensed medical professional.</p>
+                    <p><strong>No Binding Authority:</strong> HealthLife acts strictly as an informational marketplace broker. We do not underwrite, issue, or bind insurance policies. Actual coverage bounds, eventual acceptance, premium rates, and policy terms are determined solely and exclusively by the official contract you sign with your chosen healthcare carrier (e.g., BCBS, United, Aetna, Cigna, Humana). We cannot guarantee carrier acceptance or specific premium adjustments.</p>
+                    
+                    <h4 class="font-bold text-brand-greenDark text-sm">E. Limitation of Liability</h4>
+                    <p class="pb-6">To the maximum extent permitted by law, HealthLife shall not be liable for any indirect, incidental, or consequential damages resulting from your choice of health insurance coverage or your interaction with any third-party healthcare carrier or provider network. Our total liability for any claim arising out of these terms shall not exceed the amount you paid for the specific consulting session.</p>
+                </div>
+            </div>
+
+            <!-- Accordion 2: Privacy Policy -->
+            <div class="border border-brand-gold/20 rounded-xl bg-white shadow-sm overflow-hidden">
+                <button onclick="togglePolicy('privacy')" class="w-full text-left p-5 font-bold text-brand-greenDark flex justify-between items-center hover:bg-slate-50 transition">
+                    <span>2. Privacy & Data Protection Policy</span>
+                    <span id="icon-privacy" class="text-brand-gold text-xl">+</span>
+                </button>
+                <div id="content-privacy" class="policy-content px-6 text-xs text-brand-charcoal/80 space-y-4 leading-relaxed">
+                    <p class="font-semibold text-gray-500 pt-2">Last Updated: June 17, 2026</p>
+                    <p>HealthLife Consulting respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy outlines how we collect, use, maintain, and protect your information when you visit freelancehealthy.com and purchase our consulting services.</p>
+                    
+                    <h4 class="font-bold text-brand-greenDark text-sm">A. Information We Collect</h4>
+                    <p>To provide accurate marketplace coverage assessments and concierge placement services, we may collect the following information when voluntarily provided by you: Contact Information (Name, email address, phone number, and billing details); Demographic Details (General geographic region to look up localized options); and Plan Parameters necessary for evaluation. HealthLife does not store or see your raw credit card data; all processing is handled securely by our payment gateway providers.</p>
+                    
+                    <h4 class="font-bold text-brand-greenDark text-sm">B. How We Use Your Information</h4>
+                    <p>We use the collected information exclusively to generate your custom Marketplace Coverage Analysis, coordinate secure hand-off communications with local provider networks at your structural request, process transaction invoice routing, and respond to customer support inquiries or defend against fraudulent transaction disputes.</p>
+                    
+                    <h4 class="font-bold text-brand-greenDark text-sm">C. Information Sharing & Third-Party Disclosures</h4>
+                    <p><strong>We do not sell, trade, or rent your personal data to third parties.</strong> We share data only with trusted infrastructure tools necessary to execute your service, including secure encrypted payment systems, standard static data hosting servers (such as GitHub Pages), and explicit communication hand-offs to licensed health network carriers that you request us to contact.</p>
+                    
+                    <h4 class="font-bold text-brand-greenDark text-sm">D. Data Security & Location Rights</h4>
+                    <p class="pb-6">We implement industry-standard organizational protocols to protect your inputs against unauthorized access. Depending on your location, you may have legal structural rights to access, correct, or request the erasure of the records we hold. To apply adjustments, query our administration via our communication links.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Legacy Policy Summary -->
+    <section class="py-6 px-6 max-w-7xl mx-auto bg-brand-cream">
+        <div class="font-sans text-brand-charcoal/80 line-height-relaxed max-w-4xl mx-auto">
+            <h2 class="text-xs font-bold text-brand-greenDark uppercase tracking-wide mb-2">Consultation Advisory Scope Summary</h2>
+            <ul class="list-disc pl-5 space-y-1 text-[11px]">
                 <li><strong>No Medical Services Relationship:</strong> Consultants do not diagnose symptoms, prescribe therapeutics, or manage treatments. All clinical care questions must be posed directly to authorized medical doctors.</li>
                 <li><strong>No Direct Underwriting Binding:</strong> HealthLife provides exploratory informational reviews of top national carriers. Plan bounds, premium ratings, and eventual coverage acceptance metrics are governed strictly by individual contract policies signed with those medical companies.</li>
             </ul>
@@ -217,5 +323,20 @@
         </p>
     </footer>
 
+    <!-- Interactive script to power accordion windows -->
+    <script>
+        function togglePolicy(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+            
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.textContent = '+';
+            } else {
+                content.classList.add('open');
+                icon.textContent = '−';
+            }
+        }
+    </script>
 </body>
 </html>
