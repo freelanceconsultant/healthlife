@@ -168,10 +168,9 @@
         </div>
     </section>
 
+    <!-- Unified PayPal SDK (Loaded Once) -->
     <script src="https://www.paypal.com/sdk/js?client-id=BAAidRbXk4G5D7xq8vD865vORt07huetPC5yEe_0oVJGEpILCEGaiGXSFAF1ff9f9pt6bF5SWYISOIHgH4&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
-<script 
-  src="https://www.paypal.com/sdk/js?client-id=BAAidRbXk4G5D7xq8vD865vORt07huetPC5yEe_0oVJGEpILCEGaiGXSFAF1ff9f9pt6bF5SWYISOIHgH4&components=hosted-buttons&disable-funding=venmo&currency=USD">
-</script>
+
     <section id="services" class="py-20 px-6 bg-[#f5f1e9] block">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -194,7 +193,7 @@
                     
                     <div class="max-h-fit pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
                         <div class="mb-4 flex items-start">
-                            <input type="checkbox" id="agree-pkg1" class="mt-1 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green" onchange="togglePaypalButton('pkg1')">
+                            <input type="checkbox" id="agree-pkg1" class="mt-1 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green" onchange="togglePayPalButton('pkg1')">
                             <label for="agree-pkg1" class="text-[11px] text-brand-charcoal/80 leading-tight cursor-pointer">
                                 I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>. I acknowledge services are fully delivered immediately via digital analysis tools.
                             </label>
@@ -221,7 +220,7 @@
                     
                     <div class="max-h-fit pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
                         <div class="mb-4 flex items-start">
-                            <input type="checkbox" id="agree-pkg2" class="mt-1 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green" onchange="togglePaypalButton('pkg2')">
+                            <input type="checkbox" id="agree-pkg2" class="mt-1 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green" onchange="togglePayPalButton('pkg2')">
                             <label for="agree-pkg2" class="text-[11px] text-brand-charcoal/80 leading-tight cursor-pointer">
                                 I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>. I acknowledge services are fully delivered immediately via digital analysis tools.
                             </label>
@@ -236,38 +235,32 @@
         </div>
     </section>
 
+    <!-- Core Initialization and Interaction Scripts -->
     <script>
         if (window.paypal) {
-            // Package 1 Button
+            // Package 1 Button (J9R9TRFANTSYA)
             paypal.HostedButtons({
                 hostedButtonId: "J9R9TRFANTSYA",
             }).render("#paypal-container-J9R9TRFANTSYA");
 
-            // Package 2 Button
+            // Package 2 Button (BXQAN8JY42M8U)
             paypal.HostedButtons({
                 hostedButtonId: "BXQAN8JY42M8U",
             }).render("#paypal-container-BXQAN8JY42M8U");
         }
-<div id="paypal-container-PP8UUY9KBMKDQ"></div>
-<script>
-  paypal.HostedButtons({
-    hostedButtonId: "PP8UUY9KBMKDQ",
-  }).render("#paypal-container-PP8UUY9KBMKDQ")
 
-<script>
-// Anti-fraud interactive toggle script 
-function togglePayPalButton(pkg) { 
-    const checkbox = document.getElementById('agree-' + pkg); 
-    const wrapper = document.getElementById('wrapper-' + pkg); 
-    if (checkbox.checked) { 
-        wrapper.classList.remove('opacity-40', 'pointer-events-none'); 
-    } else { 
-        wrapper.classList.add('opacity-40', 'pointer-events-none'); 
-    } 
-}
-</script>
+        // Anti-fraud checkbox interaction toggles
+        function togglePayPalButton(pkg) { 
+            const checkbox = document.getElementById('agree-' + pkg); 
+            const wrapper = document.getElementById('wrapper-' + pkg); 
+            if (checkbox && checkbox.checked) { 
+                wrapper.classList.remove('opacity-40', 'pointer-events-none'); 
+            } else if (wrapper) { 
+                wrapper.classList.add('opacity-40', 'pointer-events-none'); 
+            } 
+        }
+    </script>
             
-    
     <section id="contact" class="bg-brand-greenDark text-white py-20 px-6 border-t border-brand-gold/30 relative overflow-hidden block">
         <div class="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#c5a059_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div class="max-w-4xl mx-auto text-center relative z-10">
@@ -360,7 +353,6 @@ function togglePayPalButton(pkg) {
         </div>
     </section>
 
-    <!-- Professional Footer Section with Added Contact Links -->
     <footer class="bg-[#0b3c22] text-brand-cream/50 text-center py-10 border-t border-brand-greenDark text-sm block clear-both">
         <div class="max-w-4xl mx-auto px-4 mb-6">
             <p class="text-xs font-bold uppercase tracking-widest text-brand-gold mb-3">Contact Professional Consulting</p>
