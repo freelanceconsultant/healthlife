@@ -178,7 +178,10 @@
                 <p class="text-brand-charcoal/80 mt-4 text-lg">Clear, fee-based independent consulting plans to help layout your options seamlessly.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <!-- Updated Layout Grid to accommodate 3 packages cleanly -->
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+                
+                <!-- Package 1 -->
                 <div class="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
                     <div>
                         <span class="text-xs font-bold tracking-widest text-brand-green uppercase bg-[#e2efe7] px-3 py-1 rounded-full border border-brand-green/10">Individual / Family</span>
@@ -205,6 +208,7 @@
                     </div>
                 </div>
 
+                <!-- Package 2 -->
                 <div class="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-brand-gold/20 flex flex-col justify-between relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-brand-gold text-white text-[10px] font-bold px-6 py-1 uppercase tracking-widest rotate-45 translate-x-5 translate-y-3">Premium</div>
                     <div>
@@ -231,11 +235,39 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- NEW Package 3 (Incorporated with your new PayPal Button ID PP8UUY9KBMKDQ) -->
+                <div class="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
+                    <div>
+                        <span class="text-xs font-bold tracking-widest text-brand-green uppercase bg-[#e2efe7] px-3 py-1 rounded-full border border-brand-green/10">Corporate / Business</span>
+                        <h3 class="text-2xl font-bold text-brand-greenDark mt-4">Enterprise Structure Strategy</h3>
+                        <p class="text-brand-charcoal/80 mt-4 mb-6">Optimized framework assessment for small to mid-sized businesses looking to deploy high-efficiency regional health tiers and networks.</p>
+                        <ul class="space-y-3 text-brand-charcoal/90 border-t border-brand-cream pt-6 mb-8">
+                            <li class="flex items-center"><span class="text-brand-green mr-2 font-bold">✓</span> Complete structural operational evaluation</li>
+                            <li class="flex items-center"><span class="text-brand-green mr-2 font-bold">✓</span> Multi-carrier database connection mappings</li>
+                            <li class="flex items-center"><span class="text-brand-green mr-2 font-bold">✓</span> Priority advisory portfolio layout deliverables</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="max-h-fit pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                        <div class="mb-4 flex items-start">
+                            <input type="checkbox" id="agree-pkg3" class="mt-1 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green" onchange="togglePayPalButton('pkg3')">
+                            <label for="agree-pkg3" class="text-[11px] text-brand-charcoal/80 leading-tight cursor-pointer">
+                                I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>. I acknowledge services are fully delivered immediately via digital analysis tools.
+                            </label>
+                        </div>
+                        <div id="wrapper-pkg3" class="opacity-40 pointer-events-none transition-all duration-300">
+                            <p class="text-xs font-semibold text-brand-gold mb-3 text-center uppercase tracking-wider">Secure Strategy Session</p>
+                            <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-PP8UUY9KBMKDQ"></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Core Initialization and Interaction Scripts -->
+    <!-- Unified Initialization and Interaction Scripts -->
     <script>
         if (window.paypal) {
             // Package 1 Button (J9R9TRFANTSYA)
@@ -247,6 +279,11 @@
             paypal.HostedButtons({
                 hostedButtonId: "BXQAN8JY42M8U",
             }).render("#paypal-container-BXQAN8JY42M8U");
+
+            // Added Package 3 Button (PP8UUY9KBMKDQ)
+            paypal.HostedButtons({
+                hostedButtonId: "PP8UUY9KBMKDQ",
+            }).render("#paypal-container-PP8UUY9KBMKDQ");
         }
 
         // Anti-fraud checkbox interaction toggles
@@ -258,6 +295,19 @@
             } else if (wrapper) { 
                 wrapper.classList.add('opacity-40', 'pointer-events-none'); 
             } 
+        }
+
+        // Dropdown Accordion Toggle Script
+        function togglePolicy(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.textContent = '+';
+            } else {
+                content.classList.add('open');
+                icon.textContent = '−';
+            }
         }
     </script>
             
@@ -361,30 +411,14 @@
                     <strong>Email:</strong> consulting@freelancehealthy.com
                 </a>
                 <a href="tel:+18452076553" class="hover:text-brand-gold transition duration-200 flex items-center gap-1.5">
-                    <strong>Phone:</strong> 1 (845) 207-6553
+                    <strong>Phone:</strong> +1 (845) 207-6553
                 </a>
             </div>
         </div>
-        
-        <p>&copy; 2026 HealthLife Consulting. All rights reserved.</p>
-        <p class="mt-2 text-xs text-brand-cream/40 px-4 max-w-4xl mx-auto">
-            Disclaimer: HealthLife functions solely as a marketplace information broker and coordination consult portal. We explicitly disclaim any position as a hospital network, emergency treatment clearinghouse, or clinic. For acute health updates or medical dilemmas, coordinate promptly with local professional emergency personnel or your primary clinician.
-        </p>
+        <div class="max-w-4xl mx-auto px-4 text-xs">
+            <p>&copy; 2026 HealthLife Consulting. All rights reserved. Various logos and trademarks are properties of their respective healthcare systems.</p>
+        </div>
     </footer>
 
-    <script>
-        function togglePolicy(id) {
-            const content = document.getElementById('content-' + id);
-            const icon = document.getElementById('icon-' + id);
-            
-            if (content.classList.contains('open')) {
-                content.classList.remove('open');
-                icon.textContent = '+';
-            } else {
-                content.classList.add('open');
-                icon.textContent = '-';
-            }
-        }
-    </script>
 </body>
 </html>
