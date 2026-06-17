@@ -253,20 +253,20 @@
   paypal.HostedButtons({
     hostedButtonId: "PP8UUY9KBMKDQ",
   }).render("#paypal-container-PP8UUY9KBMKDQ")
-</script>
 
-        
-        // Anti-fraud interactive toggle script
-        function togglePaypalButton(pkg) {
-            const checkbox = document.getElementById('agree-' + pkg);
-            const wrapper = document.getElementById('wrapper-' + pkg);
-            if (checkbox.checked) {
-                wrapper.classList.remove('opacity-40', 'pointer-events-none');
-            } else {
-                wrapper.classList.add('opacity-40', 'pointer-events-none');
-            }
-        }
-    </script>
+<script>
+// Anti-fraud interactive toggle script 
+function togglePayPalButton(pkg) { 
+    const checkbox = document.getElementById('agree-' + pkg); 
+    const wrapper = document.getElementById('wrapper-' + pkg); 
+    if (checkbox.checked) { 
+        wrapper.classList.remove('opacity-40', 'pointer-events-none'); 
+    } else { 
+        wrapper.classList.add('opacity-40', 'pointer-events-none'); 
+    } 
+}
+</script>
+            
     
     <section id="contact" class="bg-brand-greenDark text-white py-20 px-6 border-t border-brand-gold/30 relative overflow-hidden block">
         <div class="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#c5a059_1px,transparent_1px)] [background-size:16px_16px]"></div>
