@@ -168,7 +168,7 @@
         </div>
     </section>
 
-    <!-- Unified PayPal SDK (Loaded Once) -->
+    <!-- Unified PayPal SDK -->
     <script src="https://www.paypal.com/sdk/js?client-id=BAAidRbXk4G5D7xq8vD865vORt07huetPC5yEe_0oVJGEpILCEGaiGXSFAF1ff9f9pt6bF5SWYISOIHgH4&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
 
     <section id="services" class="py-20 px-6 bg-[#f5f1e9] block">
@@ -178,19 +178,19 @@
                 <p class="text-brand-charcoal/80 mt-4 text-lg">Clear, fee-based independent consulting plans to help layout your options seamlessly.</p>
             </div>
 
-            <!-- Updated Layout Grid to accommodate 3 packages cleanly -->
-            <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+            <!-- Grid expanded to 2 columns on medium up to large viewports for a balanced 4-package design -->
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
                 
                 <!-- Package 1 -->
-                <div class="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
+                <div class="bg-white rounded-3xl p-6 md:p-8 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
                     <div>
                         <span class="text-xs font-bold tracking-widest text-brand-green uppercase bg-[#e2efe7] px-3 py-1 rounded-full border border-brand-green/10">Individual / Family</span>
-                        <h3 class="text-2xl font-bold text-brand-greenDark mt-4">Marketplace Coverage Analysis</h3>
-                        <p class="text-brand-charcoal/80 mt-4 mb-6">A complete comparative diagnostic evaluating regional public and private options to discover premium optimizations for your home address.</p>
-                        <ul class="space-y-3 text-brand-charcoal/90 border-t border-brand-cream pt-6 mb-8">
-                            <li class="flex items-center"><span class="text-brand-green mr-2 font-bold">✓</span> Deep shopping analysis across top national carriers</li>
-                            <li class="flex items-center"><span class="text-brand-green mr-2 font-bold">✓</span> Subsidy qualification check & network validation</li>
-                            <li class="flex items-center"><span class="text-brand-green mr-2 font-bold">✓</span> 1-on-1 plan review video consultation call</li>
+                        <h3 class="text-xl font-bold text-brand-greenDark mt-4">Marketplace Coverage Analysis</h3>
+                        <p class="text-brand-charcoal/80 mt-3 mb-5 text-sm leading-relaxed">A complete comparative diagnostic evaluating regional public and private options to discover premium optimizations for your home address.</p>
+                        <ul class="space-y-2.5 text-brand-charcoal/90 border-t border-brand-cream pt-5 mb-6 text-xs">
+                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> Deep shopping analysis across top national carriers</li>
+                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> Subsidy qualification check & network validation</li>
+                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> 1-on-1 plan review video consultation call</li>
                         </ul>
                     </div>
                     
@@ -198,27 +198,27 @@
                         <div class="mb-4 flex items-start">
                             <input type="checkbox" id="agree-pkg1" class="mt-1 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green" onchange="togglePayPalButton('pkg1')">
                             <label for="agree-pkg1" class="text-[11px] text-brand-charcoal/80 leading-tight cursor-pointer">
-                                I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>. I acknowledge services are fully delivered immediately via digital analysis tools.
+                                I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>.
                             </label>
                         </div>
                         <div id="wrapper-pkg1" class="opacity-40 pointer-events-none transition-all duration-300">
-                            <p class="text-xs font-semibold text-brand-gold mb-3 text-center uppercase tracking-wider">Secure Analysis Session</p>
+                            <p class="text-[10px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Analysis Session</p>
                             <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-J9R9TRFANTSYA"></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Package 2 -->
-                <div class="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-brand-gold/20 flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-brand-gold text-white text-[10px] font-bold px-6 py-1 uppercase tracking-widest rotate-45 translate-x-5 translate-y-3">Premium</div>
+                <div class="bg-white rounded-3xl p-6 md:p-8 shadow-lg border border-brand-gold/20 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-brand-gold text-white text-[9px] font-bold px-5 py-0.5 uppercase tracking-widest rotate-45 translate-x-5 translate-y-2">Premium</div>
                     <div>
                         <span class="text-xs font-bold tracking-widest text-brand-goldDark uppercase bg-[#fdf5e6] px-3 py-1 rounded-full border border-brand-gold/20">Concierge Service</span>
-                        <h3 class="text-2xl font-bold text-brand-greenDark mt-4">Provider Placement Concierge</h3>
-                        <p class="text-brand-charcoal/80 mt-4 mb-6">For clients seeking high-end primary care matches, direct primary care relationships, or coordination across distinct medical networks without wait times.</p>
-                        <ul class="space-y-3 text-brand-charcoal/90 border-t border-brand-cream pt-6 mb-8">
-                            <li class="flex items-center"><span class="text-brand-gold mr-2 font-bold">✓</span> Comprehensive verification of local doctor intake options</li>
-                            <li class="flex items-center"><span class="text-brand-gold mr-2 font-bold">✓</span> Secure hand-off coordination to authorized medical networks</li>
-                            <li class="flex items-center"><span class="text-brand-gold mr-2 font-bold">✓</span> Administrative document portfolio arrangement</li>
+                        <h3 class="text-xl font-bold text-brand-greenDark mt-4">Provider Placement Concierge</h3>
+                        <p class="text-brand-charcoal/80 mt-3 mb-5 text-sm leading-relaxed">For clients seeking high-end primary care matches, direct relationships, or seamless coordination across distinct medical networks.</p>
+                        <ul class="space-y-2.5 text-brand-charcoal/90 border-t border-brand-cream pt-5 mb-6 text-xs">
+                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Comprehensive verification of local doctor intake options</li>
+                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Secure hand-off coordination to authorized medical networks</li>
+                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Administrative document portfolio arrangement</li>
                         </ul>
                     </div>
                     
@@ -226,26 +226,26 @@
                         <div class="mb-4 flex items-start">
                             <input type="checkbox" id="agree-pkg2" class="mt-1 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green" onchange="togglePayPalButton('pkg2')">
                             <label for="agree-pkg2" class="text-[11px] text-brand-charcoal/80 leading-tight cursor-pointer">
-                                I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>. I acknowledge services are fully delivered immediately via digital analysis tools.
+                                I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>.
                             </label>
                         </div>
                         <div id="wrapper-pkg2" class="opacity-40 pointer-events-none transition-all duration-300">
-                            <p class="text-xs font-semibold text-brand-gold mb-3 text-center uppercase tracking-wider">Secure Concierge Session</p>
+                            <p class="text-[10px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Concierge Session</p>
                             <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-BXQAN8JY42M8U"></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- NEW Package 3 (Incorporated with your new PayPal Button ID PP8UUY9KBMKDQ) -->
-                <div class="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
+                <!-- Package 3 -->
+                <div class="bg-white rounded-3xl p-6 md:p-8 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
                     <div>
                         <span class="text-xs font-bold tracking-widest text-brand-green uppercase bg-[#e2efe7] px-3 py-1 rounded-full border border-brand-green/10">Corporate / Business</span>
-                        <h3 class="text-2xl font-bold text-brand-greenDark mt-4">Enterprise Structure Strategy</h3>
-                        <p class="text-brand-charcoal/80 mt-4 mb-6">Optimized framework assessment for small to mid-sized businesses looking to deploy high-efficiency regional health tiers and networks.</p>
-                        <ul class="space-y-3 text-brand-charcoal/90 border-t border-brand-cream pt-6 mb-8">
-                            <li class="flex items-center"><span class="text-brand-green mr-2 font-bold">✓</span> Complete structural operational evaluation</li>
-                            <li class="flex items-center"><span class="text-brand-green mr-2 font-bold">✓</span> Multi-carrier database connection mappings</li>
-                            <li class="flex items-center"><span class="text-brand-green mr-2 font-bold">✓</span> Priority advisory portfolio layout deliverables</li>
+                        <h3 class="text-xl font-bold text-brand-greenDark mt-4">Enterprise Structure Strategy</h3>
+                        <p class="text-brand-charcoal/80 mt-3 mb-5 text-sm leading-relaxed">Optimized framework assessment for small to mid-sized businesses looking to deploy high-efficiency regional health tiers and networks.</p>
+                        <ul class="space-y-2.5 text-brand-charcoal/90 border-t border-brand-cream pt-5 mb-6 text-xs">
+                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> Complete structural operational evaluation</li>
+                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> Multi-carrier database connection mappings</li>
+                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> Priority advisory portfolio layout deliverables</li>
                         </ul>
                     </div>
                     
@@ -253,12 +253,39 @@
                         <div class="mb-4 flex items-start">
                             <input type="checkbox" id="agree-pkg3" class="mt-1 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green" onchange="togglePayPalButton('pkg3')">
                             <label for="agree-pkg3" class="text-[11px] text-brand-charcoal/80 leading-tight cursor-pointer">
-                                I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>. I acknowledge services are fully delivered immediately via digital analysis tools.
+                                I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>.
                             </label>
                         </div>
                         <div id="wrapper-pkg3" class="opacity-40 pointer-events-none transition-all duration-300">
-                            <p class="text-xs font-semibold text-brand-gold mb-3 text-center uppercase tracking-wider">Secure Strategy Session</p>
+                            <p class="text-[10px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Strategy Session</p>
                             <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-PP8UUY9KBMKDQ"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 4 (Newly Added Container) -->
+                <div class="bg-white rounded-3xl p-6 md:p-8 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
+                    <div>
+                        <span class="text-xs font-bold tracking-widest text-brand-goldDark uppercase bg-[#fdf5e6] px-3 py-1 rounded-full border border-brand-gold/20">Specialized Planning</span>
+                        <h3 class="text-xl font-bold text-brand-greenDark mt-4">Custom Advisory Consult</h3>
+                        <p class="text-brand-charcoal/80 mt-3 mb-5 text-sm leading-relaxed">Dedicated validation, operational assessment configurations, and localized custom mapping layout sessions for premium architectures.</p>
+                        <ul class="space-y-2.5 text-brand-charcoal/90 border-t border-brand-cream pt-5 mb-6 text-xs">
+                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Extended informational resource configurations</li>
+                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Dedicated parameter evaluation mapping</li>
+                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Direct layout architecture deliverables</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="max-h-fit pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                        <div class="mb-4 flex items-start">
+                            <input type="checkbox" id="agree-pkg4" class="mt-1 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green" onchange="togglePayPalButton('pkg4')">
+                            <label for="agree-pkg4" class="text-[11px] text-brand-charcoal/80 leading-tight cursor-pointer">
+                                I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>.
+                            </label>
+                        </div>
+                        <div id="wrapper-pkg4" class="opacity-40 pointer-events-none transition-all duration-300">
+                            <p class="text-[10px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Advisory Session</p>
+                            <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-87X7342DSCQTC"></div>
                         </div>
                     </div>
                 </div>
@@ -270,20 +297,25 @@
     <!-- Unified Initialization and Interaction Scripts -->
     <script>
         if (window.paypal) {
-            // Package 1 Button (J9R9TRFANTSYA)
+            // Package 1 Button
             paypal.HostedButtons({
                 hostedButtonId: "J9R9TRFANTSYA",
             }).render("#paypal-container-J9R9TRFANTSYA");
 
-            // Package 2 Button (BXQAN8JY42M8U)
+            // Package 2 Button
             paypal.HostedButtons({
                 hostedButtonId: "BXQAN8JY42M8U",
             }).render("#paypal-container-BXQAN8JY42M8U");
 
-            // Added Package 3 Button (PP8UUY9KBMKDQ)
+            // Package 3 Button
             paypal.HostedButtons({
                 hostedButtonId: "PP8UUY9KBMKDQ",
             }).render("#paypal-container-PP8UUY9KBMKDQ");
+
+            // Package 4 Button (Newly Initialized)
+            paypal.HostedButtons({
+                hostedButtonId: "87X7342DSCQTC",
+            }).render("#paypal-container-87X7342DSCQTC");
         }
 
         // Anti-fraud checkbox interaction toggles
@@ -377,48 +409,11 @@
                     <p>HealthLife Consulting respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy outlines how we collect, use, maintain, and protect your information when you visit freelancehealthy.com and purchase our consulting services.</p>
                     
                     <h4 class="font-bold text-brand-greenDark text-sm">A. Information We Collect</h4>
-                    <p>To provide accurate marketplace coverage assessments and concierge placement services, we may collect the following information when voluntarily provided by you: Contact Information (Name, email address, phone number, and billing details); Demographic Details (General geographic region to look up localized options); and Plan Parameters necessary for evaluation. HealthLife does not store or see your raw credit card data; all processing is handled securely by our payment gateway providers.</p>
-                    
-                    <h4 class="font-bold text-brand-greenDark text-sm">B. How We Use Your Information</h4>
-                    <p>We use the collected information exclusively to generate your custom Marketplace Coverage Analysis, coordinate secure hand-off communications with local provider networks at your structural request, process transaction invoice routing, and respond to customer support inquiries or defend against fraudulent transaction disputes.</p>
-                    
-                    <h4 class="font-bold text-brand-greenDark text-sm">C. Information Sharing & Third-Party Disclosures</h4>
-                    <p><strong>We do not sell, trade, or rent your personal data to third parties.</strong> We share data only with trusted infrastructure tools necessary to execute your service, including secure encrypted payment systems, standard static data hosting servers (such as GitHub Pages), and explicit communication hand-offs to licensed health network carriers that you request us to contact.</p>
-                    
-                    <h4 class="font-bold text-brand-greenDark text-sm">D. Data Security & Location Rights</h4>
-                    <p class="pb-6">We implement industry-standard organizational protocols to protect your inputs against unauthorized access. Depending on your location, you may have legal structural rights to access, correct, or request the erasure of the records we hold. To apply adjustments, query our administration via our communication links.</p>
+                    <p>To provide accurate marketplace coverage assessments and concierge placement services, we may collect the following information when voluntarily provided by you: Contact Information (Name, email address, phone number, and billing details).</p>
                 </div>
             </div>
-
         </div>
     </section>
-
-    <section class="py-6 px-6 max-w-4xl mx-auto bg-brand-cream block">
-        <div class="font-sans text-brand-charcoal/80 max-w-4xl mx-auto leading-relaxed">
-            <h2 class="text-xs font-bold text-brand-greenDark uppercase tracking-wide mb-2">Consultation Advisory Scope Summary</h2>
-            <ul class="list-disc pl-5 space-y-1 text-[11px]">
-                <li><strong>No Medical Services Relationship:</strong> Consultants do not diagnose symptoms, prescribe therapeutics, or manage treatments. All clinical care questions must be posed directly to authorized medical doctors.</li>
-                <li><strong>No Direct Underwriting Binding:</strong> HealthLife provides exploratory informational reviews of top national carriers. Plan bounds, premium ratings, and eventual coverage acceptance metrics are governed strictly by individual contract policies signed with those medical companies.</li>
-            </ul>
-        </div>
-    </section>
-
-    <footer class="bg-[#0b3c22] text-brand-cream/50 text-center py-10 border-t border-brand-greenDark text-sm block clear-both">
-        <div class="max-w-4xl mx-auto px-4 mb-6">
-            <p class="text-xs font-bold uppercase tracking-widest text-brand-gold mb-3">Contact Professional Consulting</p>
-            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10 text-brand-cream font-medium">
-                <a href="mailto:consulting@freelancehealthy.com" class="hover:text-brand-gold transition duration-200 flex items-center gap-1.5">
-                    <strong>Email:</strong> consulting@freelancehealthy.com
-                </a>
-                <a href="tel:+18452076553" class="hover:text-brand-gold transition duration-200 flex items-center gap-1.5">
-                    <strong>Phone:</strong> +1 (845) 207-6553
-                </a>
-            </div>
-        </div>
-        <div class="max-w-4xl mx-auto px-4 text-xs">
-            <p>&copy; 2026 HealthLife Consulting. All rights reserved. Various logos and trademarks are properties of their respective healthcare systems.</p>
-        </div>
-    </footer>
 
 </body>
 </html>
