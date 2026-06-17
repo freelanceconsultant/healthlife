@@ -37,21 +37,29 @@
 </head>
 <body class="bg-brand-cream text-brand-charcoal font-sans antialiased">
 
-    <header class="w-full bg-white border-b border-slate-100 relative z-50 clear-both block">
+    <!-- Professional Gold & Green Header -->
+    <header class="w-full bg-white border-b-2 border-brand-gold/20 relative z-50 clear-both block shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             
-            <div class="flex items-center space-x-3">
-                <img src="images/Healthlife_icon.jpeg" alt="HealthLife Logo" class="h-12 w-auto object-contain">
-                <span class="text-2xl font-bold text-slate-800 tracking-wide">HealthLife</span>
+            <!-- Logo & Dynamic Title Branding -->
+            <div class="flex items-center space-x-4">
+                <img src="images/Healthlife_icon.jpeg" alt="HealthLife Logo" class="h-20 md:h-24 w-auto object-contain transition-all duration-300">
+                <div class="flex flex-col md:flex-row md:items-center md:space-x-2 leading-none">
+                    <span class="text-xl md:text-2xl font-bold text-brand-greenDark tracking-wide">Welcome to</span>
+                    <span class="text-2xl md:text-3xl font-extrabold text-brand-gold tracking-tight">HealthLife</span>
+                </div>
             </div>
 
-            <nav class="hidden md:flex space-x-8 font-semibold text-slate-600">
-                <a href="#services" class="hover:text-emerald-600 transition">Services</a>
-                <a href="#about" class="hover:text-emerald-600 transition">About Us</a>
-                <a href="#contact" class="hover:text-emerald-600 transition">Contact</a>
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex space-x-8 font-bold text-brand-greenDark">
+                <a href="#services" class="hover:text-brand-gold transition duration-200 border-b-2 border-transparent hover:border-brand-gold pb-1">Services</a>
+                <a href="#about" class="hover:text-brand-gold transition duration-200 border-b-2 border-transparent hover:border-brand-gold pb-1">About Us</a>
+                <a href="#contact" class="hover:text-brand-gold transition duration-200 border-b-2 border-transparent hover:border-brand-gold pb-1">Contact</a>
             </nav>
+            
+            <!-- Call to Action Button -->
             <div class="hidden md:block">
-                <a href="tel:18452076553" class="bg-emerald-600 text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-emerald-700 transition shadow-sm">
+                <a href="tel:18452076553" class="bg-brand-green text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-brand-greenDark transition duration-200 shadow-md border-2 border-transparent hover:border-brand-gold/40">
                     Get a Free Quote
                 </a>
             </div>
@@ -178,7 +186,6 @@
                 <p class="text-brand-charcoal/80 mt-4 text-lg">Clear, fee-based independent consulting plans to help layout your options seamlessly.</p>
             </div>
 
-            <!-- Optimized Grid: Handles 6 packages across multiple break-points beautifully -->
             <div class="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
                 
                 <!-- Package 1 -->
@@ -317,7 +324,7 @@
                     </div>
                 </div>
 
-                <!-- Package 6 (Newly Added Container) -->
+                <!-- Package 6 -->
                 <div class="bg-white rounded-3xl p-5 md:p-6 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
                     <div>
                         <span class="text-xs font-bold tracking-widest text-brand-goldDark uppercase bg-[#fdf5e6] px-3 py-1 rounded-full border border-brand-gold/20">Geographic Transition</span>
@@ -348,41 +355,17 @@
         </div>
     </section>
 
-    <!-- Unified Initialization and Interaction Scripts -->
+    <!-- Initialization and Interaction Scripts -->
     <script>
         if (window.paypal) {
-            // Package 1 Button
-            paypal.HostedButtons({
-                hostedButtonId: "J9R9TRFANTSYA",
-            }).render("#paypal-container-J9R9TRFANTSYA");
-
-            // Package 2 Button
-            paypal.HostedButtons({
-                hostedButtonId: "BXQAN8JY42M8U",
-            }).render("#paypal-container-BXQAN8JY42M8U");
-
-            // Package 3 Button
-            paypal.HostedButtons({
-                hostedButtonId: "PP8UUY9KBMKDQ",
-            }).render("#paypal-container-PP8UUY9KBMKDQ");
-
-            // Package 4 Button
-            paypal.HostedButtons({
-                hostedButtonId: "87X7342DSCQTC",
-            }).render("#paypal-container-87X7342DSCQTC");
-
-            // Package 5 Button
-            paypal.HostedButtons({
-                hostedButtonId: "9GSZL9GFQ57TY",
-            }).render("#paypal-container-9GSZL9GFQ57TY");
-
-            // Package 6 Button (Newly Initialized)
-            paypal.HostedButtons({
-                hostedButtonId: "JGA9SMXHNR9Y8",
-            }).render("#paypal-container-JGA9SMXHNR9Y8");
+            paypal.HostedButtons({ hostedButtonId: "J9R9TRFANTSYA" }).render("#paypal-container-J9R9TRFANTSYA");
+            paypal.HostedButtons({ hostedButtonId: "BXQAN8JY42M8U" }).render("#paypal-container-BXQAN8JY42M8U");
+            paypal.HostedButtons({ hostedButtonId: "PP8UUY9KBMKDQ" }).render("#paypal-container-PP8UUY9KBMKDQ");
+            paypal.HostedButtons({ hostedButtonId: "87X7342DSCQTC" }).render("#paypal-container-87X7342DSCQTC");
+            paypal.HostedButtons({ hostedButtonId: "9GSZL9GFQ57TY" }).render("#paypal-container-9GSZL9GFQ57TY");
+            paypal.HostedButtons({ hostedButtonId: "JGA9SMXHNR9Y8" }).render("#paypal-container-JGA9SMXHNR9Y8");
         }
 
-        // Anti-fraud checkbox interaction toggles
         function togglePayPalButton(pkg) { 
             const checkbox = document.getElementById('agree-' + pkg); 
             const wrapper = document.getElementById('wrapper-' + pkg); 
@@ -393,7 +376,6 @@
             } 
         }
 
-        // Dropdown Accordion Toggle Script
         function togglePolicy(id) {
             const content = document.getElementById('content-' + id);
             const icon = document.getElementById('icon-' + id);
@@ -480,4 +462,4 @@
     </section>
 
 </body>
-</html>                   
+</html>
