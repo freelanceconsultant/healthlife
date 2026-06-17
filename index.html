@@ -178,114 +178,141 @@
                 <p class="text-brand-charcoal/80 mt-4 text-lg">Clear, fee-based independent consulting plans to help layout your options seamlessly.</p>
             </div>
 
-            <!-- Grid expanded to 2 columns on medium up to large viewports for a balanced 4-package design -->
-            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
+            <!-- Grid dynamic column distribution to adapt cleanly up to 5 elements -->
+            <div class="grid xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 gap-6 max-w-[95%] mx-auto">
                 
                 <!-- Package 1 -->
-                <div class="bg-white rounded-3xl p-6 md:p-8 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
+                <div class="bg-white rounded-3xl p-5 md:p-6 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
                     <div>
                         <span class="text-xs font-bold tracking-widest text-brand-green uppercase bg-[#e2efe7] px-3 py-1 rounded-full border border-brand-green/10">Individual / Family</span>
-                        <h3 class="text-xl font-bold text-brand-greenDark mt-4">Marketplace Coverage Analysis</h3>
-                        <p class="text-brand-charcoal/80 mt-3 mb-5 text-sm leading-relaxed">A complete comparative diagnostic evaluating regional public and private options to discover premium optimizations for your home address.</p>
-                        <ul class="space-y-2.5 text-brand-charcoal/90 border-t border-brand-cream pt-5 mb-6 text-xs">
-                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> Deep shopping analysis across top national carriers</li>
-                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> Subsidy qualification check & network validation</li>
-                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> 1-on-1 plan review video consultation call</li>
+                        <h3 class="text-lg font-bold text-brand-greenDark mt-4 leading-tight">Marketplace Coverage Analysis</h3>
+                        <p class="text-brand-charcoal/80 mt-3 mb-5 text-xs leading-relaxed">A complete comparative diagnostic evaluating regional public and private options to discover premium optimizations for your home address.</p>
+                        <ul class="space-y-2 text-brand-charcoal/90 border-t border-brand-cream pt-4 mb-6 text-[11px]">
+                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> Deep shopping analysis across carriers</li>
+                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> Subsidy qualification check</li>
+                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> 1-on-1 plan review review call</li>
                         </ul>
                     </div>
                     
-                    <div class="max-h-fit pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                        <div class="mb-4 flex items-start">
-                            <input type="checkbox" id="agree-pkg1" class="mt-1 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green" onchange="togglePayPalButton('pkg1')">
-                            <label for="agree-pkg1" class="text-[11px] text-brand-charcoal/80 leading-tight cursor-pointer">
+                    <div class="max-h-fit pt-3 border-t border-brand-cream bg-slate-50 p-3 rounded-2xl border border-slate-100">
+                        <div class="mb-3 flex items-start">
+                            <input type="checkbox" id="agree-pkg1" class="mt-0.5 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green scale-90" onchange="togglePayPalButton('pkg1')">
+                            <label for="agree-pkg1" class="text-[10px] text-brand-charcoal/80 leading-tight cursor-pointer">
                                 I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>.
                             </label>
                         </div>
                         <div id="wrapper-pkg1" class="opacity-40 pointer-events-none transition-all duration-300">
-                            <p class="text-[10px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Analysis Session</p>
+                            <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Analysis Session</p>
                             <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-J9R9TRFANTSYA"></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Package 2 -->
-                <div class="bg-white rounded-3xl p-6 md:p-8 shadow-lg border border-brand-gold/20 flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-brand-gold text-white text-[9px] font-bold px-5 py-0.5 uppercase tracking-widest rotate-45 translate-x-5 translate-y-2">Premium</div>
+                <div class="bg-white rounded-3xl p-5 md:p-6 shadow-lg border border-brand-gold/20 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-brand-gold text-white text-[8px] font-bold px-4 py-0.5 uppercase tracking-widest rotate-45 translate-x-4 translate-y-1">Premium</div>
                     <div>
                         <span class="text-xs font-bold tracking-widest text-brand-goldDark uppercase bg-[#fdf5e6] px-3 py-1 rounded-full border border-brand-gold/20">Concierge Service</span>
-                        <h3 class="text-xl font-bold text-brand-greenDark mt-4">Provider Placement Concierge</h3>
-                        <p class="text-brand-charcoal/80 mt-3 mb-5 text-sm leading-relaxed">For clients seeking high-end primary care matches, direct relationships, or seamless coordination across distinct medical networks.</p>
-                        <ul class="space-y-2.5 text-brand-charcoal/90 border-t border-brand-cream pt-5 mb-6 text-xs">
-                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Comprehensive verification of local doctor intake options</li>
-                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Secure hand-off coordination to authorized medical networks</li>
-                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Administrative document portfolio arrangement</li>
+                        <h3 class="text-lg font-bold text-brand-greenDark mt-4 leading-tight">Provider Placement Concierge</h3>
+                        <p class="text-brand-charcoal/80 mt-3 mb-5 text-xs leading-relaxed">For clients seeking high-end primary care matches, direct relationships, or seamless coordination across distinct medical networks.</p>
+                        <ul class="space-y-2 text-brand-charcoal/90 border-t border-brand-cream pt-4 mb-6 text-[11px]">
+                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Verify local doctor intake maps</li>
+                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Secure hand-off coordination</li>
+                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Administrative document prep</li>
                         </ul>
                     </div>
                     
-                    <div class="max-h-fit pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                        <div class="mb-4 flex items-start">
-                            <input type="checkbox" id="agree-pkg2" class="mt-1 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green" onchange="togglePayPalButton('pkg2')">
-                            <label for="agree-pkg2" class="text-[11px] text-brand-charcoal/80 leading-tight cursor-pointer">
+                    <div class="max-h-fit pt-3 border-t border-brand-cream bg-slate-50 p-3 rounded-2xl border border-slate-100">
+                        <div class="mb-3 flex items-start">
+                            <input type="checkbox" id="agree-pkg2" class="mt-0.5 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green scale-90" onchange="togglePayPalButton('pkg2')">
+                            <label for="agree-pkg2" class="text-[10px] text-brand-charcoal/80 leading-tight cursor-pointer">
                                 I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>.
                             </label>
                         </div>
                         <div id="wrapper-pkg2" class="opacity-40 pointer-events-none transition-all duration-300">
-                            <p class="text-[10px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Concierge Session</p>
+                            <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Concierge Session</p>
                             <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-BXQAN8JY42M8U"></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Package 3 -->
-                <div class="bg-white rounded-3xl p-6 md:p-8 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
+                <div class="bg-white rounded-3xl p-5 md:p-6 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
                     <div>
                         <span class="text-xs font-bold tracking-widest text-brand-green uppercase bg-[#e2efe7] px-3 py-1 rounded-full border border-brand-green/10">Corporate / Business</span>
-                        <h3 class="text-xl font-bold text-brand-greenDark mt-4">Enterprise Structure Strategy</h3>
-                        <p class="text-brand-charcoal/80 mt-3 mb-5 text-sm leading-relaxed">Optimized framework assessment for small to mid-sized businesses looking to deploy high-efficiency regional health tiers and networks.</p>
-                        <ul class="space-y-2.5 text-brand-charcoal/90 border-t border-brand-cream pt-5 mb-6 text-xs">
-                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> Complete structural operational evaluation</li>
-                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> Multi-carrier database connection mappings</li>
-                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> Priority advisory portfolio layout deliverables</li>
+                        <h3 class="text-lg font-bold text-brand-greenDark mt-4 leading-tight">Enterprise Structure Strategy</h3>
+                        <p class="text-brand-charcoal/80 mt-3 mb-5 text-xs leading-relaxed">Optimized framework assessment for small to mid-sized businesses looking to deploy high-efficiency regional health tiers and networks.</p>
+                        <ul class="space-y-2 text-brand-charcoal/90 border-t border-brand-cream pt-4 mb-6 text-[11px]">
+                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> Complete operational evaluation</li>
+                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> Multi-carrier connection mapping</li>
+                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> Priority advisory portfolio layout</li>
                         </ul>
                     </div>
                     
-                    <div class="max-h-fit pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                        <div class="mb-4 flex items-start">
-                            <input type="checkbox" id="agree-pkg3" class="mt-1 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green" onchange="togglePayPalButton('pkg3')">
-                            <label for="agree-pkg3" class="text-[11px] text-brand-charcoal/80 leading-tight cursor-pointer">
+                    <div class="max-h-fit pt-3 border-t border-brand-cream bg-slate-50 p-3 rounded-2xl border border-slate-100">
+                        <div class="mb-3 flex items-start">
+                            <input type="checkbox" id="agree-pkg3" class="mt-0.5 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green scale-90" onchange="togglePayPalButton('pkg3')">
+                            <label for="agree-pkg3" class="text-[10px] text-brand-charcoal/80 leading-tight cursor-pointer">
                                 I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>.
                             </label>
                         </div>
                         <div id="wrapper-pkg3" class="opacity-40 pointer-events-none transition-all duration-300">
-                            <p class="text-[10px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Strategy Session</p>
+                            <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Strategy Session</p>
                             <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-PP8UUY9KBMKDQ"></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Package 4 (Newly Added Container) -->
-                <div class="bg-white rounded-3xl p-6 md:p-8 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
+                <!-- Package 4 -->
+                <div class="bg-white rounded-3xl p-5 md:p-6 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
                     <div>
                         <span class="text-xs font-bold tracking-widest text-brand-goldDark uppercase bg-[#fdf5e6] px-3 py-1 rounded-full border border-brand-gold/20">Specialized Planning</span>
-                        <h3 class="text-xl font-bold text-brand-greenDark mt-4">Custom Advisory Consult</h3>
-                        <p class="text-brand-charcoal/80 mt-3 mb-5 text-sm leading-relaxed">Dedicated validation, operational assessment configurations, and localized custom mapping layout sessions for premium architectures.</p>
-                        <ul class="space-y-2.5 text-brand-charcoal/90 border-t border-brand-cream pt-5 mb-6 text-xs">
-                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Extended informational resource configurations</li>
-                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Dedicated parameter evaluation mapping</li>
-                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Direct layout architecture deliverables</li>
+                        <h3 class="text-lg font-bold text-brand-greenDark mt-4 leading-tight">Custom Advisory Consult</h3>
+                        <p class="text-brand-charcoal/80 mt-3 mb-5 text-xs leading-relaxed">Dedicated validation, operational assessment configurations, and localized custom mapping layout sessions for premium architectures.</p>
+                        <ul class="space-y-2 text-brand-charcoal/90 border-t border-brand-cream pt-4 mb-6 text-[11px]">
+                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Extended informational setup</li>
+                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Parameter configuration layout</li>
+                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Custom roadmap deliverables</li>
                         </ul>
                     </div>
                     
-                    <div class="max-h-fit pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                        <div class="mb-4 flex items-start">
-                            <input type="checkbox" id="agree-pkg4" class="mt-1 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green" onchange="togglePayPalButton('pkg4')">
-                            <label for="agree-pkg4" class="text-[11px] text-brand-charcoal/80 leading-tight cursor-pointer">
+                    <div class="max-h-fit pt-3 border-t border-brand-cream bg-slate-50 p-3 rounded-2xl border border-slate-100">
+                        <div class="mb-3 flex items-start">
+                            <input type="checkbox" id="agree-pkg4" class="mt-0.5 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green scale-90" onchange="togglePayPalButton('pkg4')">
+                            <label for="agree-pkg4" class="text-[10px] text-brand-charcoal/80 leading-tight cursor-pointer">
                                 I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>.
                             </label>
                         </div>
                         <div id="wrapper-pkg4" class="opacity-40 pointer-events-none transition-all duration-300">
-                            <p class="text-[10px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Advisory Session</p>
+                            <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Advisory Session</p>
                             <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-87X7342DSCQTC"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 5 (Newly Added Container) -->
+                <div class="bg-white rounded-3xl p-5 md:p-6 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
+                    <div>
+                        <span class="text-xs font-bold tracking-widest text-brand-green uppercase bg-[#e2efe7] px-3 py-1 rounded-full border border-brand-green/10">Alternative Routing</span>
+                        <h3 class="text-lg font-bold text-brand-greenDark mt-4 leading-tight">Alternative Sharing Roadmap</h3>
+                        <p class="text-brand-charcoal/80 mt-3 mb-5 text-xs leading-relaxed">Specialized comparative evaluation map testing verified Health Share models, catastrophic indemnity, and custom direct care integrations.</p>
+                        <ul class="space-y-2 text-brand-charcoal/90 border-t border-brand-cream pt-4 mb-6 text-[11px]">
+                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> Health Share validation diagnostics</li>
+                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> Direct primary care match layouts</li>
+                            <li class="flex items-start"><span class="text-brand-green mr-2 font-bold">✓</span> Non-traditional premium mapping</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="max-h-fit pt-3 border-t border-brand-cream bg-slate-50 p-3 rounded-2xl border border-slate-100">
+                        <div class="mb-3 flex items-start">
+                            <input type="checkbox" id="agree-pkg5" class="mt-0.5 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green scale-90" onchange="togglePayPalButton('pkg5')">
+                            <label for="agree-pkg5" class="text-[10px] text-brand-charcoal/80 leading-tight cursor-pointer">
+                                I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>.
+                            </label>
+                        </div>
+                        <div id="wrapper-pkg5" class="opacity-40 pointer-events-none transition-all duration-300">
+                            <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Routing Session</p>
+                            <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-9GSZL9GFQ57TY"></div>
                         </div>
                     </div>
                 </div>
@@ -312,10 +339,15 @@
                 hostedButtonId: "PP8UUY9KBMKDQ",
             }).render("#paypal-container-PP8UUY9KBMKDQ");
 
-            // Package 4 Button (Newly Initialized)
+            // Package 4 Button
             paypal.HostedButtons({
                 hostedButtonId: "87X7342DSCQTC",
             }).render("#paypal-container-87X7342DSCQTC");
+
+            // Package 5 Button (Newly Initialized)
+            paypal.HostedButtons({
+                hostedButtonId: "9GSZL9GFQ57TY",
+            }).render("#paypal-container-9GSZL9GFQ57TY");
         }
 
         // Anti-fraud checkbox interaction toggles
