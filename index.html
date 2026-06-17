@@ -178,8 +178,8 @@
                 <p class="text-brand-charcoal/80 mt-4 text-lg">Clear, fee-based independent consulting plans to help layout your options seamlessly.</p>
             </div>
 
-            <!-- Grid dynamic column distribution to adapt cleanly up to 5 elements -->
-            <div class="grid xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 gap-6 max-w-[95%] mx-auto">
+            <!-- Optimized Grid: Handles 6 packages across multiple break-points beautifully -->
+            <div class="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
                 
                 <!-- Package 1 -->
                 <div class="bg-white rounded-3xl p-5 md:p-6 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
@@ -290,7 +290,7 @@
                     </div>
                 </div>
 
-                <!-- Package 5 (Newly Added Container) -->
+                <!-- Package 5 -->
                 <div class="bg-white rounded-3xl p-5 md:p-6 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
                     <div>
                         <span class="text-xs font-bold tracking-widest text-brand-green uppercase bg-[#e2efe7] px-3 py-1 rounded-full border border-brand-green/10">Alternative Routing</span>
@@ -313,6 +313,33 @@
                         <div id="wrapper-pkg5" class="opacity-40 pointer-events-none transition-all duration-300">
                             <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Routing Session</p>
                             <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-9GSZL9GFQ57TY"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 6 (Newly Added Container) -->
+                <div class="bg-white rounded-3xl p-5 md:p-6 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
+                    <div>
+                        <span class="text-xs font-bold tracking-widest text-brand-goldDark uppercase bg-[#fdf5e6] px-3 py-1 rounded-full border border-brand-gold/20">Geographic Transition</span>
+                        <h3 class="text-lg font-bold text-brand-greenDark mt-4 leading-tight">Cross-State Relocation Analysis</h3>
+                        <p class="text-brand-charcoal/80 mt-3 mb-5 text-xs leading-relaxed">Intensive consulting evaluating network structures across state borders. We cross-check regional hospital intake status to lock stable parameters.</p>
+                        <ul class="space-y-2 text-brand-charcoal/90 border-t border-brand-cream pt-4 mb-6 text-[11px]">
+                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Cross-border marketplace parameter map</li>
+                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Regional hospital intake validation</li>
+                            <li class="flex items-start"><span class="text-brand-gold mr-2 font-bold">✓</span> Baseline gap-avoidance transition timelines</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="max-h-fit pt-3 border-t border-brand-cream bg-slate-50 p-3 rounded-2xl border border-slate-100">
+                        <div class="mb-3 flex items-start">
+                            <input type="checkbox" id="agree-pkg6" class="mt-0.5 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green scale-90" onchange="togglePayPalButton('pkg6')">
+                            <label for="agree-pkg6" class="text-[10px] text-brand-charcoal/80 leading-tight cursor-pointer">
+                                I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>.
+                            </label>
+                        </div>
+                        <div id="wrapper-pkg6" class="opacity-40 pointer-events-none transition-all duration-300">
+                            <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Relocation Session</p>
+                            <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-JGA9SMXHNR9Y8"></div>
                         </div>
                     </div>
                 </div>
@@ -344,10 +371,15 @@
                 hostedButtonId: "87X7342DSCQTC",
             }).render("#paypal-container-87X7342DSCQTC");
 
-            // Package 5 Button (Newly Initialized)
+            // Package 5 Button
             paypal.HostedButtons({
                 hostedButtonId: "9GSZL9GFQ57TY",
             }).render("#paypal-container-9GSZL9GFQ57TY");
+
+            // Package 6 Button (Newly Initialized)
+            paypal.HostedButtons({
+                hostedButtonId: "JGA9SMXHNR9Y8",
+            }).render("#paypal-container-JGA9SMXHNR9Y8");
         }
 
         // Anti-fraud checkbox interaction toggles
@@ -448,4 +480,4 @@
     </section>
 
 </body>
-</html>
+</html>                   
