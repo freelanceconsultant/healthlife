@@ -6,17 +6,17 @@
     <title>HealthLife | Professional Healthcare Consultation & Marketplace Navigation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
+        window.tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         brand: {
-                            cream: '#fcfaf6',      /* Exact warm cream background from your logo */
-                            gold: '#c5a059',       /* Elegant gold accent */
-                            goldDark: '#b38f46',   /* Deep gold for hover states/buttons */
-                            green: '#13693b',      /* Rich green from the leaves */
-                            greenDark: '#0e522d',  /* Dark forest green for headers/text */
-                            charcoal: '#2c332e'    /* Soft dark charcoal-green for body text */
+                            cream: '#fcfaf6',
+                            gold: '#c5a059',
+                            goldDark: '#b38f46',
+                            green: '#13693b',
+                            greenDark: '#0e522d',
+                            charcoal: '#2c332e'
                         }
                     }
                 }
@@ -24,7 +24,6 @@
         }
     </script>
     <style>
-        /* Smooth transition for the policy toggles */
         .policy-content {
             max-height: 0;
             overflow: hidden;
@@ -51,7 +50,6 @@
                 <a href="#about" class="hover:text-emerald-600 transition">About Us</a>
                 <a href="#contact" class="hover:text-emerald-600 transition">Contact</a>
             </nav>
-
             <div class="hidden md:block">
                 <a href="tel:1234567890" class="bg-emerald-600 text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-emerald-700 transition shadow-sm">
                     Get a Free Quote
