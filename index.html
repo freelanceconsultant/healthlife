@@ -51,7 +51,7 @@
                 <a href="#contact" class="hover:text-emerald-600 transition">Contact</a>
             </nav>
             <div class="hidden md:block">
-                <a href="tel:1234567890" class="bg-emerald-600 text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-emerald-700 transition shadow-sm">
+                <a href="tel:18452076553" class="bg-emerald-600 text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-emerald-700 transition shadow-sm">
                     Get a Free Quote
                 </a>
             </div>
@@ -190,7 +190,7 @@
                         </ul>
                     </div>
                     
-                    <div class="mt-auto pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                    <div class="max-h-fit pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
                         <div class="mb-4 flex items-start">
                             <input type="checkbox" id="agree-pkg1" class="mt-1 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green" onchange="togglePaypalButton('pkg1')">
                             <label for="agree-pkg1" class="text-[11px] text-brand-charcoal/80 leading-tight cursor-pointer">
@@ -217,7 +217,7 @@
                         </ul>
                     </div>
                     
-                    <div class="mt-auto pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                    <div class="max-h-fit pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
                         <div class="mb-4 flex items-start">
                             <input type="checkbox" id="agree-pkg2" class="mt-1 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green" onchange="togglePaypalButton('pkg2')">
                             <label for="agree-pkg2" class="text-[11px] text-brand-charcoal/80 leading-tight cursor-pointer">
@@ -341,7 +341,7 @@
         </div>
     </section>
 
-    <section class="py-6 px-6 max-w-7xl mx-auto bg-brand-cream block">
+    <section class="py-6 px-6 max-w-4xl mx-auto bg-brand-cream block">
         <div class="font-sans text-brand-charcoal/80 max-w-4xl mx-auto leading-relaxed">
             <h2 class="text-xs font-bold text-brand-greenDark uppercase tracking-wide mb-2">Consultation Advisory Scope Summary</h2>
             <ul class="list-disc pl-5 space-y-1 text-[11px]">
@@ -351,7 +351,20 @@
         </div>
     </section>
 
-    <footer class="bg-[#0b3c22] text-brand-cream/50 text-center py-8 border-t border-brand-greenDark text-sm block clear-both">
+    <!-- Professional Footer Section with Added Contact Links -->
+    <footer class="bg-[#0b3c22] text-brand-cream/50 text-center py-10 border-t border-brand-greenDark text-sm block clear-both">
+        <div class="max-w-4xl mx-auto px-4 mb-6">
+            <p class="text-xs font-bold uppercase tracking-widest text-brand-gold mb-3">Contact Professional Consulting</p>
+            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10 text-brand-cream font-medium">
+                <a href="mailto:consulting@freelancehealthy.com" class="hover:text-brand-gold transition duration-200 flex items-center gap-1.5">
+                    <strong>Email:</strong> consulting@freelancehealthy.com
+                </a>
+                <a href="tel:+18452076553" class="hover:text-brand-gold transition duration-200 flex items-center gap-1.5">
+                    <strong>Phone:</strong> 1 (845) 207-6553
+                </a>
+            </div>
+        </div>
+        
         <p>&copy; 2026 HealthLife Consulting. All rights reserved.</p>
         <p class="mt-2 text-xs text-brand-cream/40 px-4 max-w-4xl mx-auto">
             Disclaimer: HealthLife functions solely as a marketplace information broker and coordination consult portal. We explicitly disclaim any position as a hospital network, emergency treatment clearinghouse, or clinic. For acute health updates or medical dilemmas, coordinate promptly with local professional emergency personnel or your primary clinician.
@@ -368,7 +381,7 @@
                 icon.textContent = '+';
             } else {
                 content.classList.add('open');
-                icon.textContent = '−';
+                icon.textContent = '-';
             }
         }
     </script>
