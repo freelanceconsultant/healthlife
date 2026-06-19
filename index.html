@@ -37,11 +37,9 @@
 </head>
 <body class="bg-brand-cream text-brand-charcoal font-sans antialiased">
 
-    <!-- Professional Gold & Green Header -->
     <header class="w-full bg-white border-b-2 border-brand-gold/20 relative z-50 clear-both block shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             
-            <!-- Logo & Dynamic Title Branding -->
             <div class="flex items-center space-x-4">
                 <img src="images/Healthlife_icon.jpeg" alt="HealthLife Logo" class="h-20 md:h-24 w-auto object-contain transition-all duration-300">
                 <div class="flex flex-col md:flex-row md:items-center md:space-x-2 leading-none">
@@ -50,14 +48,12 @@
                 </div>
             </div>
 
-            <!-- Navigation Links -->
             <nav class="hidden md:flex space-x-8 font-bold text-brand-greenDark">
                 <a href="#services" class="hover:text-brand-gold transition duration-200 border-b-2 border-transparent hover:border-brand-gold pb-1">Services</a>
                 <a href="#about" class="hover:text-brand-gold transition duration-200 border-b-2 border-transparent hover:border-brand-gold pb-1">About Us</a>
                 <a href="#contact" class="hover:text-brand-gold transition duration-200 border-b-2 border-transparent hover:border-brand-gold pb-1">Contact</a>
             </nav>
             
-            <!-- Call to Action Button -->
             <div class="hidden md:block">
                 <a href="tel:18452076553" class="bg-brand-green text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-brand-greenDark transition duration-200 shadow-md border-2 border-transparent hover:border-brand-gold/40">
                     Get a Free Quote
@@ -176,8 +172,7 @@
         </div>
     </section>
 
-    <!-- Unified PayPal SDK -->
-    <script src="https://www.paypal.com/sdk/js?client-id=BAAidRbXk4G5D7xq8vD865vORt07huetPC5yEe_0oVJGEpILCEGaiGXSFAF1ff9f9pt6bF5SWYISOIHgH4&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAidRbXk4G5D7xq8vD865vORt07huetPC5yEe_0oVJGEpILCEGaiGXSFAF1ff9f9pt6bF5SWYISOIHgH4&disable-funding=venmo&currency=USD"></script>
 
     <section id="services" class="py-20 px-6 bg-[#f5f1e9] block">
         <div class="max-w-7xl mx-auto">
@@ -188,7 +183,6 @@
 
             <div class="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
                 
-                <!-- Package 1 -->
                 <div class="bg-white rounded-3xl p-5 md:p-6 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
                     <div>
                         <span class="text-xs font-bold tracking-widest text-brand-green uppercase bg-[#e2efe7] px-3 py-1 rounded-full border border-brand-green/10">Individual / Family</span>
@@ -201,18 +195,20 @@
                         </ul>
                     </div>
                     
-                    <div class="max-h-fit pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                        <div id="wrapper-pkg1" class="transition-all duration-300">
-                            <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Analysis Session</p>
-                            <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-J9R9TRFANTSYA"></div>
+                    <div class="max-h-fit pt-3 border-t border-brand-cream bg-slate-50 p-3 rounded-2xl border border-slate-100">
+                        <div class="mb-3 flex items-start">
+                            <input type="checkbox" id="agree-pkg1" class="mt-0.5 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green scale-90" onchange="togglePayPalButton('pkg1')">
+                            <label for="agree-pkg1" class="text-[10px] text-brand-charcoal/80 leading-tight cursor-pointer">
+                                I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>.
+                            </label>
                         </div>
-                        <p class="text-[9px] text-brand-charcoal/60 leading-tight text-center mt-3 px-1">
-                            By paying via PayPal, you implicitly agree to our <a href="#legal-docs" class="text-brand-green underline font-medium">Terms of Service</a> &amp; <strong>No-Refund Policy</strong>.
-                        </p>
+                        <div id="wrapper-pkg1" class="opacity-40 pointer-events-none transition-all duration-300">
+                            <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Analysis Session</p>
+                            <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-button-container-pkg1"></div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Package 2 -->
                 <div class="bg-white rounded-3xl p-5 md:p-6 shadow-lg border border-brand-gold/20 flex flex-col justify-between relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-brand-gold text-white text-[8px] font-bold px-4 py-0.5 uppercase tracking-widest rotate-45 translate-x-4 translate-y-1">Premium</div>
                     <div>
@@ -226,18 +222,20 @@
                         </ul>
                     </div>
                     
-                    <div class="max-h-fit pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                        <div id="wrapper-pkg2" class="transition-all duration-300">
-                            <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Concierge Session</p>
-                            <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-BXQAN8JY42M8U"></div>
+                    <div class="max-h-fit pt-3 border-t border-brand-cream bg-slate-50 p-3 rounded-2xl border border-slate-100">
+                        <div class="mb-3 flex items-start">
+                            <input type="checkbox" id="agree-pkg2" class="mt-0.5 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green scale-90" onchange="togglePayPalButton('pkg2')">
+                            <label for="agree-pkg2" class="text-[10px] text-brand-charcoal/80 leading-tight cursor-pointer">
+                                I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>.
+                            </label>
                         </div>
-                        <p class="text-[9px] text-brand-charcoal/60 leading-tight text-center mt-3 px-1">
-                            By paying via PayPal, you implicitly agree to our <a href="#legal-docs" class="text-brand-green underline font-medium">Terms of Service</a> &amp; <strong>No-Refund Policy</strong>.
-                        </p>
+                        <div id="wrapper-pkg2" class="opacity-40 pointer-events-none transition-all duration-300">
+                            <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Concierge Session</p>
+                            <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-button-container-pkg2"></div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Package 3 -->
                 <div class="bg-white rounded-3xl p-5 md:p-6 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
                     <div>
                         <span class="text-xs font-bold tracking-widest text-brand-green uppercase bg-[#e2efe7] px-3 py-1 rounded-full border border-brand-green/10">Corporate / Business</span>
@@ -250,18 +248,20 @@
                         </ul>
                     </div>
                     
-                    <div class="max-h-fit pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                        <div id="wrapper-pkg3" class="transition-all duration-300">
-                            <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Strategy Session</p>
-                            <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-PP8UUY9KBMKDQ"></div>
+                    <div class="max-h-fit pt-3 border-t border-brand-cream bg-slate-50 p-3 rounded-2xl border border-slate-100">
+                        <div class="mb-3 flex items-start">
+                            <input type="checkbox" id="agree-pkg3" class="mt-0.5 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green scale-90" onchange="togglePayPalButton('pkg3')">
+                            <label for="agree-pkg3" class="text-[10px] text-brand-charcoal/80 leading-tight cursor-pointer">
+                                I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>.
+                            </label>
                         </div>
-                        <p class="text-[9px] text-brand-charcoal/60 leading-tight text-center mt-3 px-1">
-                            By paying via PayPal, you implicitly agree to our <a href="#legal-docs" class="text-brand-green underline font-medium">Terms of Service</a> &amp; <strong>No-Refund Policy</strong>.
-                        </p>
+                        <div id="wrapper-pkg3" class="opacity-40 pointer-events-none transition-all duration-300">
+                            <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Strategy Session</p>
+                            <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-button-container-pkg3"></div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Package 4 -->
                 <div class="bg-white rounded-3xl p-5 md:p-6 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
                     <div>
                         <span class="text-xs font-bold tracking-widest text-brand-goldDark uppercase bg-[#fdf5e6] px-3 py-1 rounded-full border border-brand-gold/20">Specialized Planning</span>
@@ -274,18 +274,20 @@
                         </ul>
                     </div>
                     
-                    <div class="max-h-fit pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                        <div id="wrapper-pkg4" class="transition-all duration-300">
-                            <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Advisory Session</p>
-                            <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-87X7342DSCQTC"></div>
+                    <div class="max-h-fit pt-3 border-t border-brand-cream bg-slate-50 p-3 rounded-2xl border border-slate-100">
+                        <div class="mb-3 flex items-start">
+                            <input type="checkbox" id="agree-pkg4" class="mt-0.5 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green scale-90" onchange="togglePayPalButton('pkg4')">
+                            <label for="agree-pkg4" class="text-[10px] text-brand-charcoal/80 leading-tight cursor-pointer">
+                                I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>.
+                            </label>
                         </div>
-                        <p class="text-[9px] text-brand-charcoal/60 leading-tight text-center mt-3 px-1">
-                            By paying via PayPal, you implicitly agree to our <a href="#legal-docs" class="text-brand-green underline font-medium">Terms of Service</a> &amp; <strong>No-Refund Policy</strong>.
-                        </p>
+                        <div id="wrapper-pkg4" class="opacity-40 pointer-events-none transition-all duration-300">
+                            <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Advisory Session</p>
+                            <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-button-container-pkg4"></div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Package 5 -->
                 <div class="bg-white rounded-3xl p-5 md:p-6 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
                     <div>
                         <span class="text-xs font-bold tracking-widest text-brand-green uppercase bg-[#e2efe7] px-3 py-1 rounded-full border border-brand-green/10">Alternative Routing</span>
@@ -298,18 +300,20 @@
                         </ul>
                     </div>
                     
-                    <div class="max-h-fit pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                        <div id="wrapper-pkg5" class="transition-all duration-300">
-                            <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Routing Session</p>
-                            <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-9GSZL9GFQ57TY"></div>
+                    <div class="max-h-fit pt-3 border-t border-brand-cream bg-slate-50 p-3 rounded-2xl border border-slate-100">
+                        <div class="mb-3 flex items-start">
+                            <input type="checkbox" id="agree-pkg5" class="mt-0.5 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green scale-90" onchange="togglePayPalButton('pkg5')">
+                            <label for="agree-pkg5" class="text-[10px] text-brand-charcoal/80 leading-tight cursor-pointer">
+                                I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>.
+                            </label>
                         </div>
-                        <p class="text-[9px] text-brand-charcoal/60 leading-tight text-center mt-3 px-1">
-                            By paying via PayPal, you implicitly agree to our <a href="#legal-docs" class="text-brand-green underline font-medium">Terms of Service</a> &amp; <strong>No-Refund Policy</strong>.
-                        </p>
+                        <div id="wrapper-pkg5" class="opacity-40 pointer-events-none transition-all duration-300">
+                            <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Routing Session</p>
+                            <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-button-container-pkg5"></div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Package 6 -->
                 <div class="bg-white rounded-3xl p-5 md:p-6 shadow-lg border border-brand-gold/10 flex flex-col justify-between hover:border-brand-gold/30 transition">
                     <div>
                         <span class="text-xs font-bold tracking-widest text-brand-goldDark uppercase bg-[#fdf5e6] px-3 py-1 rounded-full border border-brand-gold/20">Geographic Transition</span>
@@ -322,99 +326,80 @@
                         </ul>
                     </div>
                     
-                    <div class="max-h-fit pt-4 border-t border-brand-cream bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                        <div id="wrapper-pkg6" class="transition-all duration-300">
-                            <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Relocation Session</p>
-                            <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-container-JGA9SMXHNR9Y8"></div>
+                    <div class="max-h-fit pt-3 border-t border-brand-cream bg-slate-50 p-3 rounded-2xl border border-slate-100">
+                        <div class="mb-3 flex items-start">
+                            <input type="checkbox" id="agree-pkg6" class="mt-0.5 mr-2 rounded border-gray-300 text-brand-green focus:ring-brand-green scale-90" onchange="togglePayPalButton('pkg6')">
+                            <label for="agree-pkg6" class="text-[10px] text-brand-charcoal/80 leading-tight cursor-pointer">
+                                I agree to the <a href="#legal-docs" class="text-brand-green underline font-semibold">Terms of Service</a> & explicit <strong>No-Refund Policy</strong>.
+                            </label>
                         </div>
-                        <p class="text-[9px] text-brand-charcoal/60 leading-tight text-center mt-3 px-1">
-                            By paying via PayPal, you implicitly agree to our <a href="#legal-docs" class="text-brand-green underline font-medium">Terms of Service</a> &amp; <strong>No-Refund Policy</strong>.
-                        </p>
+                        <div id="wrapper-pkg6" class="opacity-40 pointer-events-none transition-all duration-300">
+                            <p class="text-[9px] font-semibold text-brand-gold mb-2 text-center uppercase tracking-wider">Secure Relocation Session</p>
+                            <div class="max-w-[280px] mx-auto min-h-[40px]" id="paypal-button-container-pkg6"></div>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
-            
-    <section id="contact" class="bg-brand-greenDark text-white py-20 px-6 border-t border-brand-gold/30 relative overflow-hidden block">
-        <div class="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#c5a059_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <h2 class="text-3xl md:text-4xl font-bold text-brand-cream">Request a Marketplace Assessment</h2>
-            <p class="text-brand-cream/80 mt-3 max-w-xl mx-auto text-sm"> Drop your details below. An independent marketplace strategist will reach out within one business day.</p>
-            
-            <form class="mt-10 grid md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
-                <div>
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-brand-gold mb-2">Full Name</label>
-                    <input type="text" placeholder="John Doe" class="w-full bg-white/10 border border-white/20 p-3 rounded-xl text-white focus:outline-none focus:border-brand-gold text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-brand-gold mb-2">Email Address</label>
-                    <input type="email" placeholder="john@example.com" class="w-full bg-white/10 border border-white/20 p-3 rounded-xl text-white focus:outline-none focus:border-brand-gold text-sm">
-                </div>
-                <div class="md:col-span-2">
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-brand-gold mb-2">Message or Structural Intent</label>
-                    <textarea rows="4" placeholder="Tell us a little bit about your family or organizational coverage needs..." class="w-full bg-white/10 border border-white/20 p-3 rounded-xl text-white focus:outline-none focus:border-brand-gold text-sm"></textarea>
-                </div>
-                <div class="md:col-span-2 text-center mt-4">
-                    <button type="submit" class="bg-brand-gold hover:bg-brand-goldDark text-brand-charcoal font-bold px-8 py-3 rounded-full shadow-lg transition duration-200 text-sm">
-                        Submit Evaluation Request
-                    </button>
-                </div>
-            </form>
-        </div>
-    </section>
 
-    <!-- Interactive Legal Accordion Document Section targeted by togglePolicy() -->
-    <section id="legal-docs" class="py-16 px-6 max-w-4xl mx-auto block">
-        <h2 class="text-2xl font-bold text-brand-greenDark text-center mb-8">Legal Agreements & Governance</h2>
-        <div class="space-y-4">
-            <div class="bg-white border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm">
-                <button class="w-full px-6 py-4 flex justify-between items-center font-bold text-brand-greenDark bg-slate-50 border-b border-brand-gold/10" onclick="togglePolicy('terms')">
-                    <span>1. Advisory Terms of Service</span>
-                    <span id="icon-terms" class="text-xl font-mono">+</span>
-                </button>
-                <div id="content-terms" class="policy-content">
-                    <div class="p-6 text-xs text-brand-charcoal/80 leading-relaxed space-y-3">
-                        <p>Welcome to HealthLife. By selecting our fee-based standalone independent consulting sessions or interacting with our mapping systems, you acknowledge that our analytical summaries function strictly as layout blueprints.</p>
-                        <p>We work completely separate from licensed state public health exchanges and carrier underwriting trees. All operational decisions match consumer configurations at point of contract intake with your final provider selections.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm">
-                <button class="w-full px-6 py-4 flex justify-between items-center font-bold text-brand-greenDark bg-slate-50 border-b border-brand-gold/10" onclick="togglePolicy('refund')">
-                    <span>2. Explicit No-Refund Policy</span>
-                    <span id="icon-refund" class="text-xl font-mono">+</span>
-                </button>
-                <div id="content-refund" class="policy-content">
-                    <div class="p-6 text-xs text-brand-charcoal/80 leading-relaxed space-y-3">
-                        <p>Because our consulting structures deliver immediate downloadable data and active real-time custom analysis mapping directly during session booking allocations, <strong>all standalone layout session sales remain strictly non-refundable</strong>.</p>
-                        <p>If scheduling parameters require updates, clients may freely adjust roadmap consulting date structures up to 24 hours prior to initial calendar intake configurations by contacting support lines.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-brand-charcoal text-white/60 text-xs py-8 text-center border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-6">
-            <p class="mb-2 text-white/80 font-semibold">&copy; 2026 HealthLife. All rights reserved.</p>
-            <p class="max-w-3xl mx-auto leading-relaxed text-[11px]">
-                Disclaimer: HealthLife functions entirely as an independent research, strategy, and layout consultancy framework. We do not write premium insurance policies directly, function as a corporate registry clearinghouse, or process state health benefits payouts. All direct plan selections take place safely on carrier infrastructure networks.
-            </p>
-        </div>
-    </footer>
-
-    <!-- Initialization and Interaction Scripts -->
     <script>
+        // Setup configuration parameters for each offer card
+        const packagesConfig = {
+            'pkg1': { container: '#paypal-button-container-pkg1', amount: '149.00', description: 'Marketplace Coverage Analysis Session' },
+            'pkg2': { container: '#paypal-button-container-pkg2', amount: '299.00', description: 'Provider Placement Concierge Session' },
+            'pkg3': { container: '#paypal-button-container-pkg3', amount: '499.00', description: 'Enterprise Structure Strategy Session' },
+            'pkg4': { container: '#paypal-button-container-pkg4', amount: '349.00', description: 'Custom Advisory Consult Session' },
+            'pkg5': { container: '#paypal-button-container-pkg5', amount: '199.00', description: 'Alternative Sharing Roadmap Session' },
+            'pkg6': { container: '#paypal-button-container-pkg6', amount: '249.00', description: 'Cross-State Relocation Analysis Session' }
+        };
+
+        // Render standard PayPal buttons inside each product card container layout dynamically
         if (window.paypal) {
-            paypal.HostedButtons({ hostedButtonId: "J9R9TRFANTSYA" }).render("#paypal-container-J9R9TRFANTSYA");
-            paypal.HostedButtons({ hostedButtonId: "BXQAN8JY42M8U" }).render("#paypal-container-BXQAN8JY42M8U");
-            paypal.HostedButtons({ hostedButtonId: "PP8UUY9KBMKDQ" }).render("#paypal-container-PP8UUY9KBMKDQ");
-            paypal.HostedButtons({ hostedButtonId: "87X7342DSCQTC" }).render("#paypal-container-87X7342DSCQTC");
-            paypal.HostedButtons({ hostedButtonId: "9GSZL9GFQ57TY" }).render("#paypal-container-9GSZL9GFQ57TY");
-            paypal.HostedButtons({ hostedButtonId: "JGA9SMXHNR9Y8" }).render("#paypal-container-JGA9SMXHNR9Y8");
+            Object.keys(packagesConfig).forEach(key => {
+                const cfg = packagesConfig[key];
+                if (document.querySelector(cfg.container)) {
+                    paypal.Buttons({
+                        style: {
+                            layout: 'vertical',
+                            color:  'gold',
+                            shape:  'rect',
+                            label:  'checkout',
+                            height: 40
+                        },
+                        createOrder: function(data, actions) {
+                            return actions.order.create({
+                                purchase_units: [{
+                                    description: cfg.description,
+                                    amount: {
+                                        currency_code: 'USD',
+                                        value: cfg.amount
+                                    }
+                                }]
+                            });
+                        },
+                        onApprove: function(data, actions) {
+                            return actions.order.capture().then(function(details) {
+                                alert('Thank you for your trust, ' + details.payer.name.given_name + '! Your consulting window setup session has been secured.');
+                            });
+                        },
+                        onError: function(err) {
+                            console.error('PayPal Integration Execution Exception Error Context:', err);
+                        }
+                    }).render(cfg.container);
+                }
+            });
+        }
+
+        function togglePayPalButton(pkg) { 
+            const checkbox = document.getElementById('agree-' + pkg); 
+            const wrapper = document.getElementById('wrapper-' + pkg); 
+            if (checkbox && checkbox.checked) { 
+                wrapper.classList.remove('opacity-40', 'pointer-events-none'); 
+            } else if (wrapper) { 
+                wrapper.classList.add('opacity-40', 'pointer-events-none'); 
+            } 
         }
 
         function togglePolicy(id) {
