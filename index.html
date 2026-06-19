@@ -383,39 +383,132 @@
         </div>
     </section>
 
-    <!-- Interactive Legal Accordion Document Section targeted by togglePolicy() -->
-    <section id="legal-docs" class="py-16 px-6 max-w-4xl mx-auto block">
-        <h2 class="text-2xl font-bold text-brand-greenDark text-center mb-8">Legal Agreements & Governance</h2>
-        <div class="space-y-4">
-            <div class="bg-white border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm">
-                <button class="w-full px-6 py-4 flex justify-between items-center font-bold text-brand-greenDark bg-slate-50 border-b border-brand-gold/10" onclick="togglePolicy('terms')">
-                    <span>1. Advisory Terms of Service</span>
-                    <span id="icon-terms" class="text-xl font-mono">+</span>
-                </button>
-                <div id="content-terms" class="policy-content">
-                    <div class="p-6 text-xs text-brand-charcoal/80 leading-relaxed space-y-3">
-                        <p>Welcome to HealthLife. By selecting our fee-based standalone independent consulting sessions or interacting with our mapping systems, you acknowledge that our analytical summaries function strictly as layout blueprints.</p>
-                        <p>We work completely separate from licensed state public health exchanges and carrier underwriting trees. All operational decisions match consumer configurations at point of contract intake with your final provider selections.</p>
-                    </div>
-                </div>
-            </div>
+   <!-- Interactive Legal Accordion Document Section -->
+<section id="legal-docs" class="py-16 px-6 max-w-4xl mx-auto block">
+    <h2 class="text-2xl font-bold text-brand-greenDark text-center mb-8">
+        Legal Agreements & Governance
+    </h2>
 
-            <div class="bg-white border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm">
-                <button class="w-full px-6 py-4 flex justify-between items-center font-bold text-brand-greenDark bg-slate-50 border-b border-brand-gold/10" onclick="togglePolicy('refund')">
-                    <span>2. Explicit No-Refund Policy</span>
-                    <span id="icon-refund" class="text-xl font-mono">+</span>
-                </button>
-                <div id="content-refund" class="policy-content">
-                    <div class="p-6 text-xs text-brand-charcoal/80 leading-relaxed space-y-3">
-                        <p>Because our consulting structures deliver immediate downloadable data and active real-time custom analysis mapping directly during session booking allocations, <strong>all standalone layout session sales remain strictly non-refundable</strong>.</p>
-                        <p>If scheduling parameters require updates, clients may freely adjust roadmap consulting date structures up to 24 hours prior to initial calendar intake configurations by contacting support lines.</p>
-                   
-                    </div>
-                
+    <div class="space-y-4">
+
+        <!-- Terms of Service -->
+        <div class="bg-white border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm">
+            <button class="w-full px-6 py-4 flex justify-between items-center font-bold text-brand-greenDark bg-slate-50 border-b border-brand-gold/10"
+                onclick="togglePolicy('terms')">
+                <span>1. Advisory Terms of Service</span>
+                <span id="icon-terms" class="text-xl font-mono">+</span>
+            </button>
+
+            <div id="content-terms" class="policy-content">
+                <div class="p-6 text-xs text-brand-charcoal/80 leading-relaxed space-y-3">
+                    <p>
+                        HealthLife operates as an independent healthcare marketplace research,
+                        strategy, and consulting firm. All services provided are strictly
+                        informational and advisory in nature and do not constitute medical,
+                        legal, insurance underwriting, or clinical advice.
+                    </p>
+                    <p>
+                        Clients acknowledge that all consulting deliverables function as
+                        analytical frameworks and informational summaries designed to assist
+                        in independent decision-making. Final plan selection, enrollment,
+                        and contractual execution occur directly between the Client and
+                        third-party carriers or providers.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- No Refund Policy -->
+        <div class="bg-white border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm">
+            <button class="w-full px-6 py-4 flex justify-between items-center font-bold text-brand-greenDark bg-slate-50 border-b border-brand-gold/10"
+                onclick="togglePolicy('refund')">
+                <span>2. Explicit No-Refund Policy</span>
+                <span id="icon-refund" class="text-xl font-mono">+</span>
+            </button>
+
+            <div id="content-refund" class="policy-content">
+                <div class="p-6 text-xs text-brand-charcoal/80 leading-relaxed space-y-3">
+                    <p>
+                        Due to the nature of our services — which include immediate access to
+                        proprietary materials, preparatory analysis, and real-time consulting
+                        resources upon booking — <strong>all purchases are final and
+                        non-refundable once confirmed</strong>.
+                    </p>
+                    <p>
+                        Clients are responsible for reviewing service descriptions carefully
+                        prior to purchase. Scheduling changes may be requested up to
+                        <strong>twenty-four (24) hours</strong> prior to the originally scheduled
+                        session by contacting support. Requests submitted after this window
+                        may not be accommodated.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Billing & Disputes -->
+        <div class="bg-white border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm">
+            <button class="w-full px-6 py-4 flex justify-between items-center font-bold text-brand-greenDark bg-slate-50 border-b border-brand-gold/10"
+                onclick="togglePolicy('billing')">
+                <span>3. Billing Inquiries & Payment Disputes</span>
+                <span id="icon-billing" class="text-xl font-mono">+</span>
+            </button>
+
+            <div id="content-billing" class="policy-content">
+                <div class="p-6 text-xs text-brand-charcoal/80 leading-relaxed space-y-3">
+                    <p>
+                        By completing a transaction, the Client represents that they are
+                        authorized to use the selected payment method and that all billing
+                        information provided is accurate and complete.
+                    </p>
+                    <p>
+                        Clients agree to make a good-faith effort to contact HealthLife
+                        directly regarding any billing questions or concerns prior to
+                        initiating a payment dispute through a payment processor or
+                        financial institution.
+                    </p>
+                    <p>
+                        HealthLife maintains detailed service records, transaction logs,
+                        delivery confirmations, and communication history to verify service
+                        fulfillment and billing accuracy.
+                    </p>
+                    <p>
+                        Nothing in this policy limits or waives any rights a Client may have
+                        under applicable payment processor policies or consumer protection
+                        laws.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Limitation of Liability -->
+        <div class="bg-white border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm">
+            <button class="w-full px-6 py-4 flex justify-between items-center font-bold text-brand-greenDark bg-slate-50 border-b border-brand-gold/10"
+                onclick="togglePolicy('liability')">
+                <span>4. Limitation of Liability</span>
+                <span id="icon-liability" class="text-xl font-mono">+</span>
+            </button>
+
+            <div id="content-liability" class="policy-content">
+                <div class="p-6 text-xs text-brand-charcoal/80 leading-relaxed space-y-3">
+                    <p>
+                        To the fullest extent permitted by applicable law, HealthLife shall
+                        not be liable for any indirect, incidental, special, or consequential
+                        damages, including but not limited to financial losses, coverage
+                        disruptions, premium changes, or outcomes resulting from third-party
+                        provider decisions.
+                    </p>
+                    <p>
+                        <strong>Liability Cap:</strong> In all cases, HealthLife’s total
+                        cumulative liability arising from or related to any service, claim,
+                        or dispute shall be strictly limited to the exact amount paid by the
+                        Client for the specific service giving rise to the claim.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>    </section>
 
     <footer class="bg-brand-charcoal text-white/60 text-xs py-8 text-center border-t border-white/10">
         <div class="max-w-7xl mx-auto px-6">
