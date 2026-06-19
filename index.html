@@ -54,6 +54,7 @@
             <nav class="hidden md:flex space-x-8 font-bold text-brand-greenDark">
                 <a href="#services" class="hover:text-brand-gold transition duration-200 border-b-2 border-transparent hover:border-brand-gold pb-1">Services</a>
                 <a href="#about" class="hover:text-brand-gold transition duration-200 border-b-2 border-transparent hover:border-brand-gold pb-1">About Us</a>
+                <a href="#legal-docs" class="hover:text-brand-gold transition duration-200 border-b-2 border-transparent hover:border-brand-gold pb-1">Terms</a>
                 <a href="#contact" class="hover:text-brand-gold transition duration-200 border-b-2 border-transparent hover:border-brand-gold pb-1">Contact</a>
             </nav>
             
@@ -375,7 +376,7 @@
                     <textarea rows="4" placeholder="Tell us a little bit about your family or organizational coverage needs..." class="w-full bg-white/10 border border-white/20 p-3 rounded-xl text-white focus:outline-none focus:border-brand-gold text-sm"></textarea>
                 </div>
                 <div class="md:col-span-2 text-center mt-4">
-                    <button type="submit" class="bg-brand-gold hover:bg-brand-goldDark text-brand-charcoal font-bold px-8 py-3 rounded-full shadow-lg transition duration-200 text-sm">
+                    <button type="submit" class="bg-brand-gold hover:bg-brand-goldDark text-brand-charcoal font-bold px-8 py-3 rounded-full shadow-lg transition">
                         Submit Evaluation Request
                     </button>
                 </div>
@@ -383,79 +384,109 @@
         </div>
     </section>
 
-    <!-- Interactive Legal Accordion Document Section targeted by togglePolicy() -->
-    <section id="legal-docs" class="py-16 px-6 max-w-4xl mx-auto block">
-        <h2 class="text-2xl font-bold text-brand-greenDark text-center mb-8">Legal Agreements & Governance</h2>
-        <div class="space-y-4">
-            <div class="bg-white border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm">
-                <button class="w-full px-6 py-4 flex justify-between items-center font-bold text-brand-greenDark bg-slate-50 border-b border-brand-gold/10" onclick="togglePolicy('terms')">
-                    <span>1. Advisory Terms of Service</span>
-                    <span id="icon-terms" class="text-xl font-mono">+</span>
-                </button>
-                <div id="content-terms" class="policy-content">
-                    <div class="p-6 text-xs text-brand-charcoal/80 leading-relaxed space-y-3">
-                        <p>Welcome to HealthLife. By selecting our fee-based standalone independent consulting sessions or interacting with our mapping systems, you acknowledge that our analytical summaries function strictly as layout blueprints.</p>
-                        <p>We work completely separate from licensed state public health exchanges and carrier underwriting trees. All operational decisions match consumer configurations at point of contract intake with your final provider selections.</p>
+    <!-- Consolidated Legal Framework and Shield Section -->
+    <section id="legal-docs" class="bg-brand-cream border-t border-brand-gold/20 py-16 px-6 block">
+        <div class="max-w-4xl mx-auto">
+            <div class="border-b border-brand-gold/20 pb-6 mb-8 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-4">
+                <div>
+                    <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                        <span class="bg-brand-gold text-white text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded">Contract Execution Archive</span>
+                        <span class="text-[10px] text-brand-charcoal/60 font-semibold">Updated: June 19, 2026</span>
                     </div>
+                    <h2 class="text-2xl font-black text-brand-greenDark tracking-tight">Terms of Service & Chargeback Dispute Framework</h2>
+                </div>
+                <div class="text-xs text-brand-green font-bold flex items-center gap-1 bg-[#e2efe7] px-3 py-1 rounded-full border border-brand-green/10">
+                    🔒 Interface Consent Vault Active
                 </div>
             </div>
 
-            <div class="bg-white border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm">
-                <button class="w-full px-6 py-4 flex justify-between items-center font-bold text-brand-greenDark bg-slate-50 border-b border-brand-gold/10" onclick="togglePolicy('refund')">
-                    <span>2. Explicit No-Refund Policy</span>
-                    <span id="icon-refund" class="text-xl font-mono">+</span>
-                </button>
-                <div id="content-refund" class="policy-content">
-                    <div class="p-6 text-xs text-brand-charcoal/80 leading-relaxed space-y-3">
-                        <p>Because our consulting structures deliver immediate downloadable data and active real-time custom analysis mapping directly during session booking allocations, <strong>all standalone layout session sales remain strictly non-refundable</strong>.</p>
-                        <p>If scheduling parameters require updates, clients may freely adjust roadmap consulting date structures up to 24 hours prior to initial calendar intake configurations by contacting support lines.</p>
-                    </div>
+            <div class="space-y-6 text-xs text-brand-charcoal/80 leading-relaxed">
+                <!-- Segment 1 -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-brand-gold/10">
+                    <h3 class="font-bold text-brand-greenDark text-sm mb-2">1. Corporate Identification & Operating Parameters</h3>
+                    <p class="mb-2">
+                        This digital document establishes a legally enforceable binding contract between the buying consumer ("Client", "you", "your") and <strong>HealthLife Consulting</strong> (the operating business interface which also formalizes records under its active registered tracking domain name <strong>freelancehealthy.com</strong>, hereinafter "HealthLife", "the Company", "we", or "our").
+                    </p>
+                    <p class="bg-amber-50 border-l-4 border-brand-gold p-3 rounded-r-lg text-brand-charcoal font-medium text-[11px]">
+                        <strong>CRITICAL STATUS DISCLAIMER:</strong> HealthLife operates strictly as an independent operational marketplace layout broker and strategic advisory consulting firm. This organization is NOT a medical treatment facility, clinic, licensed health insurance carrier, or clinical healthcare provider. The Company maintains no corporate underwriting or binding coverage authority. Final health insurance acceptance parameters, monthly premium index tiers, and policy structural terms are determined exclusively by the respective third-party health insurance networks or state/federal exchange frameworks chosen by the client.
+                    </p>
                 </div>
+
+                <!-- Segment 2 -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-brand-gold/10">
+                    <h3 class="font-bold text-brand-greenDark text-sm mb-2">2. Defined Fee-Based Consultation Packages</h3>
+                    <p class="mb-3">
+                        Transactions executed on this domain constitute an explicit service order for fixed-fee independent administrative consulting, comparative plan layouts, and structural marketplace analysis mappings. Purchased deliverables are classified strictly as custom analytics and professional labor allocation broken down across our specialized tiers:
+                    </p>
+                    <ul class="space-y-2 pl-2 border-l-2 border-brand-gold/20">
+                        <li><strong>Marketplace Coverage Analysis (Individual / Family):</strong> Structural mapping of localized public and private program components, tax subsidy parameter checking, network confirmation, and an optimization review video consultation.</li>
+                        <li><strong>Provider Placement Concierge (Concierge Service):</strong> Active validation of regional practitioner intake maps, physician availability cross-checks, network synchronization, and personalized administrative document portfolio arrangement.</li>
+                        <li><strong>Enterprise Structure Strategy (Corporate / Business):</strong> Deployment and setup consulting strategies assessing operational multi-carrier connections to structure regional premium tiers for small to mid-sized businesses.</li>
+                    </ul>
+                </div>
+
+                <!-- Segment 3 -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border-2 border-brand-gold/30">
+                    <h3 class="font-bold text-brand-greenDark text-sm mb-2">3. Strict No-Refund Architecture & Fraud Guardrail</h3>
+                    <p class="mb-2 font-semibold text-brand-charcoal text-[11px]">
+                        ALL SALES ARE FINAL. HEALTHLIFE ENFORCES A ZERO-REFUND POLICY ACROSS ALL CONSULTATION PORTFOLIOS.
+                    </p>
+                    <p class="mb-3">
+                        <strong>Operational Rationale:</strong> Because initialization triggers instant server database queries, automated regional resource matching parameters, and immediate reservation of specialized consulting hours, our services are legally classified as fully rendered and delivered at the exact millisecond of purchase execution. No refunds, partial clawbacks, or transactional modifications will be honored due to a client’s subsequent marketplace choices, changes in corporate layout needs, or variations in regional carrier subsidy eligibilities.
+                    </p>
+                    <p class="bg-brand-cream border border-brand-gold/20 p-3 rounded-xl text-[11px] font-medium text-brand-greenDark">
+                        🛡️ <strong>Technical Enforcement Notice:</strong> This user interface deploys a defensive JavaScript anti-fraud lock. The payment gateways (including secure PayPal hosted scripts) are structurally frozen (`pointer-events-none`) and obfuscated (`opacity-40`) until the client intentionally selects the verification checkbox, recording an immutable click-consent timestamp tied to your digital footprint and billing profile.
+                    </p>
+                </div>
+
+                <!-- Segment 4 -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-red-200 bg-gradient-to-br from-white to-red-50/10">
+                    <h3 class="font-bold text-red-900 text-sm mb-2">4. Complete Ban on Chargebacks & Contractual Liability</h3>
+                    <p class="mb-2">
+                        The Client acknowledges they possess lawful authorization to access the chosen financial payment vehicle. The Client is <strong>strictly and contractually prohibited</strong> from initiating any chargeback, transactional dispute, reversal request, or fraudulent "unrecognized charge" claim with their issuing bank, card network, or merchant transaction gateway.
+                    </p>
+                    <p class="mb-2 font-medium text-red-950">
+                        In the event that a Client violates these terms by opening an unauthorized payment dispute, the Client accepts absolute contractual liability for all administrative processing penalties, merchant fees, legal counsel hours, and recovery expenses incurred by HealthLife or its recovery agents while successfully defending the charge.
+                    </p>
+                    <p class="text-[10px]">
+                        HealthLife records interface validation logs, complete system headers, matching dynamic IP routing profiles, and delivery confirmations to systematically counter and overturn bad-faith payment interventions.
+                    </p>
+                </div>
+
+                <!-- Segment 5 -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-brand-gold/10">
+                    <h3 class="font-bold text-brand-greenDark text-sm mb-2">5. Contractual Limitations of Liability</h3>
+                    <p class="mb-2">
+                        To the maximum extent permitted by applicable legal jurisdiction, HealthLife and freelancehealthy.com explicitly disclaim all liability for any indirect, incidental, accidental, or consequential financial damages, coverage disruptions, premium rate adjustments, or medical provider network shifts arising from your subsequent carrier interactions.
+                    </p>
+                    <p class="font-bold text-brand-greenDark">
+                        Total Liability Cap: The maximum cumulative liability of HealthLife for any validated, verified breach or dispute under this agreement is strictly capped at the exact, dollar-for-dollar financial sum paid by the Client to HealthLife for the specific consulting session in question.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer Meta Text -->
+            <div class="mt-8 pt-4 border-t border-brand-gold/20 text-center text-[10px] text-brand-charcoal/50">
+                © 2026 HealthLife Consulting & freelancehealthy.com. All international rights reserved. Unauthorized duplication of this defensive legal framework is strictly prohibited.
             </div>
         </div>
     </section>
 
-    <footer class="bg-brand-charcoal text-white/60 text-xs py-8 text-center border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-6">
-            <p class="mb-2 text-white/80 font-semibold">&copy; 2026 HealthLife. All rights reserved.</p>
-            <p class="max-w-3xl mx-auto leading-relaxed text-[11px]">
-                Disclaimer: HealthLife functions entirely as an independent research, strategy, and layout consultancy framework. We do not write premium insurance policies directly, function as a corporate registry clearinghouse, or process state health benefits payouts. All direct plan selections take place safely on carrier infrastructure networks.
-            </p>
-        </div>
-    </footer>
-
-    <!-- Initialization and Interaction Scripts -->
+    <!-- JavaScript Interface Control Script -->
     <script>
-        if (window.paypal) {
-            paypal.HostedButtons({ hostedButtonId: "J9R9TRFANTSYA" }).render("#paypal-container-J9R9TRFANTSYA");
-            paypal.HostedButtons({ hostedButtonId: "BXQAN8JY42M8U" }).render("#paypal-container-BXQAN8JY42M8U");
-            paypal.HostedButtons({ hostedButtonId: "PP8UUY9KBMKDQ" }).render("#paypal-container-PP8UUY9KBMKDQ");
-            paypal.HostedButtons({ hostedButtonId: "87X7342DSCQTC" }).render("#paypal-container-87X7342DSCQTC");
-            paypal.HostedButtons({ hostedButtonId: "9GSZL9GFQ57TY" }).render("#paypal-container-9GSZL9GFQ57TY");
-            paypal.HostedButtons({ hostedButtonId: "JGA9SMXHNR9Y8" }).render("#paypal-container-JGA9SMXHNR9Y8");
-        }
-
-        function togglePayPalButton(pkg) { 
-            const checkbox = document.getElementById('agree-' + pkg); 
-            const wrapper = document.getElementById('wrapper-' + pkg); 
-            if (checkbox && checkbox.checked) { 
-                wrapper.classList.remove('opacity-40', 'pointer-events-none'); 
-            } else if (wrapper) { 
-                wrapper.classList.add('opacity-40', 'pointer-events-none'); 
-            } 
-        }
-
-        function togglePolicy(id) {
-            const content = document.getElementById('content-' + id);
-            const icon = document.getElementById('icon-' + id);
-            if (content.classList.contains('open')) {
-                content.classList.remove('open');
-                icon.textContent = '+';
-            } else {
-                content.classList.add('open');
-                icon.textContent = '−';
+        function togglePayPalButton(pkgId) {
+            const checkbox = document.getElementById(`agree-${pkgId}`);
+            const wrapper = document.getElementById(`wrapper-${pkgId}`);
+            
+            if (checkbox && wrapper) {
+                if (checkbox.checked) {
+                    wrapper.classList.remove('opacity-40', 'pointer-events-none');
+                } else {
+                    wrapper.classList.add('opacity-40', 'pointer-events-none');
+                }
             }
         }
     </script>
+
 </body>
 </html>
