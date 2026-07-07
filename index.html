@@ -54,7 +54,7 @@
             <nav class="hidden md:flex space-x-8 font-bold text-brand-greenDark">
                 <a href="#services" class="hover:text-brand-gold transition duration-200 border-b-2 border-transparent hover:border-brand-gold pb-1">Services</a>
                 <a href="#about" class="hover:text-brand-gold transition duration-200 border-b-2 border-transparent hover:border-brand-gold pb-1">About Us</a>
-                <a href="#contact" class="hover:text-brand-gold transition duration-200 border-b-2 border-transparent hover:border-brand-gold pb-1">Contact</a>
+                <a href="#contact" class="hover:text-brand-gold transition duration-200 border-b-2 border-transparent hover:border-border-brand-gold pb-1">Contact</a>
             </nav>
             
             <!-- Call to Action Button -->
@@ -141,6 +141,27 @@
         </div>
     </section>
 
+    <section class="bg-white py-16 px-6 border-t border-brand-gold/10 block">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 rounded-3xl overflow-hidden shadow-xl border border-brand-gold/20">
+                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1000" alt="Happy Family Consulting with Health Consultant" class="w-full h-[380px] object-cover">
+            </div>
+            <div class="order-1 md:order-2 text-left">
+                <h2 class="text-3xl font-bold text-brand-greenDark leading-snug">Personalized Strategy Sessions That Put Your Mind At Ease</h2>
+                <p class="text-brand-charcoal/80 mt-4 leading-relaxed">
+                    Our fee-based consulting layout sessions are engineered to bring absolute clarity to your family or corporate financial planning frameworks. By matching structural regional parameters directly to validated carrier intake databases, we save clients hours of complex paper navigation.
+                </p>
+                <div class="mt-6 space-y-3">
+                    <div class="flex items-center text-sm font-semibold text-brand-greenDark">
+                        <span class="w-6 h-6 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-goldDark mr-3 text-xs">✓</span> Completely Independent Analysis (No Carrier Bias)
+                    </div>
+                    <div class="flex items-center text-sm font-semibold text-brand-greenDark">
+                        <span class="w-6 h-6 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-goldDark mr-3 text-xs">✓</span> Structured PDF Evaluation Delivered Post-Session
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="carriers" class="bg-white py-12 px-6 border-y border-brand-gold/20 block">
         <div class="max-w-5xl mx-auto text-center">
@@ -158,6 +179,7 @@
     <!-- Unified PayPal SDK -->
     <script src="https://www.paypal.com/sdk/js?client-id=BAAidRbXk4G5D7xq8vD865vORt07huetPC5yEe_0oVJGEpILCEGaiGXSFAF1ff9f9pt6bF5SWYISOIHgH4&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
 
+    <!-- Services and Payments Section -->
     <section id="services" class="py-20 px-6 bg-[#f5f1e9] block">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -165,9 +187,70 @@
                 <p class="text-brand-charcoal/80 mt-4 text-lg">Clear, fee-based independent consulting plans to help layout your options seamlessly.</p>
             </div>
 
-            <div class="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
+            <!-- Modern 2-Column Desktop Grid for Payment Choices -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 
-               
+                <!-- PayPal Method Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-brand-gold/10 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-xl font-bold text-brand-greenDark">Strategy Session (Standard Checkout)</h3>
+                            <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-full">Credit / PayPal</span>
+                        </div>
+                        <p class="text-brand-charcoal/80 text-sm leading-relaxed mb-6">
+                            Book your advisory evaluation framework instantly using our secure card gateway processor.
+                        </p>
+                        
+                        <!-- Dynamic PayPal Agreement Box -->
+                        <div class="mb-6 bg-slate-50 p-4 rounded-xl border border-gray-100">
+                            <label class="flex items-start cursor-pointer select-none text-xs text-brand-charcoal/70 leading-normal">
+                                <input type="checkbox" id="agree-standard" onchange="togglePayPalButton('standard')" class="mt-0.5 mr-2.5 h-4 w-4 rounded border-gray-300 text-brand-green focus:ring-brand-green">
+                                <span>I agree to the <a href="#legal-docs" class="text-brand-gold hover:underline font-semibold">Explicit No-Refund Policy</a> and confirm all service outputs are entirely advisory.</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- PayPal Target Render Container -->
+                    <div id="wrapper-standard" class="opacity-40 pointer-events-none transition-opacity duration-200">
+                        <div id="paypal-container-J9R9TRFANTSYA" class="w-full"></div>
+                    </div>
+                </div>
+
+                <!-- Zelle Transfer Method Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-brand-gold/20 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-brand-gold text-brand-greenDark text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-bl-lg">
+                        Zero Fees
+                    </div>
+                    <div>
+                        <div class="flex items-center space-x-2.5 mb-6">
+                            <!-- Placeholder for downloaded official logo path: e.g. images/zelle-logo.png -->
+                            <img src="images/zelle-logo.png" alt="Zelle" class="h-6 object-contain" onerror="this.style.display='none'; document.getElementById('zelle-text-fallback').style.display='inline'">
+                            <span id="zelle-text-fallback" class="hidden text-purple-700 font-extrabold text-xl tracking-tight">Zelle<sup>®</sup></span>
+                            <h3 class="text-xl font-bold text-brand-greenDark">Direct Bank Transfer</h3>
+                        </div>
+                        <p class="text-brand-charcoal/80 text-sm leading-relaxed mb-6">
+                            Preferred for fast corporate clearing. Open your secure personal or corporate banking application to transmit registration fees instantly without credit processing delays.
+                        </p>
+
+                        <!-- Verified Routing Direct Display Framework -->
+                        <div class="bg-brand-cream border border-brand-gold/20 p-4 rounded-xl space-y-2 mb-6">
+                            <div class="flex justify-between text-xs">
+                                <span class="font-medium text-brand-charcoal/60 uppercase">Business Recipient:</span>
+                                <span class="font-bold text-brand-greenDark">HealthLife Consulting</span>
+                            </div>
+                            <div class="flex justify-between text-xs">
+                                <span class="font-medium text-brand-charcoal/60 uppercase">Registered Email ID:</span>
+                                <span class="font-bold text-brand-greenDark select-all">billing@freelancehealthy.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-[11px] text-brand-charcoal/70 bg-slate-50 p-3 rounded-lg border border-dashed border-brand-gold/30">
+                        <span class="font-bold text-brand-goldDark">Verification Step:</span> Please input your client full name or evaluation invoice string directly into your bank app’s memo field. Our operations team verifies incoming ledger matches manually within 1-2 hours.
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
             
@@ -199,132 +282,126 @@
         </div>
     </section>
 
-   <!-- Interactive Legal Accordion Document Section -->
-<section id="legal-docs" class="py-16 px-6 max-w-4xl mx-auto block">
-    <h2 class="text-2xl font-bold text-brand-greenDark text-center mb-8">
-        Legal Agreements & Governance
-    </h2>
+    <!-- Interactive Legal Accordion Document Section -->
+    <section id="legal-docs" class="py-16 px-6 max-w-4xl mx-auto block">
+        <h2 class="text-2xl font-bold text-brand-greenDark text-center mb-8">
+            Legal Agreements & Governance
+        </h2>
 
-    <div class="space-y-4">
+        <div class="space-y-4">
+            <!-- Terms of Service -->
+            <div class="bg-white border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm">
+                <button class="w-full px-6 py-4 flex justify-between items-center font-bold text-brand-greenDark bg-slate-50 border-b border-brand-gold/10"
+                    onclick="togglePolicy('terms')">
+                    <span>1. Advisory Terms of Service</span>
+                    <span id="icon-terms" class="text-xl font-mono">+</span>
+                </button>
+                <div id="content-terms" class="policy-content">
+                    <div class="p-6 text-xs text-brand-charcoal/80 leading-relaxed space-y-3">
+                        <p>
+                            HealthLife operates as an independent healthcare marketplace research,
+                            strategy, and consulting firm. All services provided are strictly
+                            informational and advisory in nature and do not constitute medical,
+                            legal, insurance underwriting, or clinical advice.
+                        </p>
+                        <p>
+                            Clients acknowledge that all consulting deliverables function as
+                            analytical frameworks and informational summaries designed to assist
+                            in independent decision-making. Final plan selection, enrollment,
+                            and contractual execution occur directly between the Client and
+                            third-party carriers or providers.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Terms of Service -->
-        <div class="bg-white border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm">
-            <button class="w-full px-6 py-4 flex justify-between items-center font-bold text-brand-greenDark bg-slate-50 border-b border-brand-gold/10"
-                onclick="togglePolicy('terms')">
-                <span>1. Advisory Terms of Service</span>
-                <span id="icon-terms" class="text-xl font-mono">+</span>
-            </button>
+            <!-- No Refund Policy -->
+            <div class="bg-white border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm">
+                <button class="w-full px-6 py-4 flex justify-between items-center font-bold text-brand-greenDark bg-slate-50 border-b border-brand-gold/10"
+                    onclick="togglePolicy('refund')">
+                    <span>2. Explicit No-Refund Policy</span>
+                    <span id="icon-refund" class="text-xl font-mono">+</span>
+                </button>
+                <div id="content-refund" class="policy-content">
+                    <div class="p-6 text-xs text-brand-charcoal/80 leading-relaxed space-y-3">
+                        <p>
+                            Due to the nature of our services — which include immediate access to
+                            proprietary materials, preparatory analysis, and real-time consulting
+                            resources upon booking — <strong>all purchases are final and
+                            non-refundable once confirmed</strong>.
+                        </p>
+                        <p>
+                            Clients are responsible for reviewing service descriptions carefully
+                            prior to purchase. Scheduling changes may be requested up to
+                            <strong>twenty-four (24) hours</strong> prior to the originally scheduled
+                            session by contacting support. Requests submitted after this window
+                            may not be accommodated.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-            <div id="content-terms" class="policy-content">
-                <div class="p-6 text-xs text-brand-charcoal/80 leading-relaxed space-y-3">
-                    <p>
-                        HealthLife operates as an independent healthcare marketplace research,
-                        strategy, and consulting firm. All services provided are strictly
-                        informational and advisory in nature and do not constitute medical,
-                        legal, insurance underwriting, or clinical advice.
-                    </p>
-                    <p>
-                        Clients acknowledge that all consulting deliverables function as
-                        analytical frameworks and informational summaries designed to assist
-                        in independent decision-making. Final plan selection, enrollment,
-                        and contractual execution occur directly between the Client and
-                        third-party carriers or providers.
-                    </p>
+            <!-- Billing & Disputes -->
+            <div class="bg-white border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm">
+                <button class="w-full px-6 py-4 flex justify-between items-center font-bold text-brand-greenDark bg-slate-50 border-b border-brand-gold/10"
+                    onclick="togglePolicy('billing')">
+                    <span>3. Billing Inquiries & Payment Disputes</span>
+                    <span id="icon-billing" class="text-xl font-mono">+</span>
+                </button>
+                <div id="content-billing" class="policy-content">
+                    <div class="p-6 text-xs text-brand-charcoal/80 leading-relaxed space-y-3">
+                        <p>
+                            By completing a transaction, the Client represents that they are
+                            authorized to use the selected payment method and that all billing
+                            information provided is accurate and complete.
+                        </p>
+                        <p>
+                            Clients agree to make a good-faith effort to contact HealthLife
+                            directly regarding any billing questions or concerns prior to
+                            initiating a payment dispute through a payment processor or
+                            financial institution.
+                        </p>
+                        <p>
+                            HealthLife maintains detailed service records, transaction logs,
+                            delivery confirmations, and communication history to verify service
+                            fulfillment and billing accuracy.
+                        </p>
+                        <p>
+                            Nothing in this policy limits or waives any rights a Client may have
+                            under applicable payment processor policies or consumer protection
+                            laws.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Limitation of Liability -->
+            <div class="bg-white border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm">
+                <button class="w-full px-6 py-4 flex justify-between items-center font-bold text-brand-greenDark bg-slate-50 border-b border-brand-gold/10"
+                    onclick="togglePolicy('liability')">
+                    <span>4. Limitation of Liability</span>
+                    <span id="icon-liability" class="text-xl font-mono">+</span>
+                </button>
+                <div id="content-liability" class="policy-content">
+                    <div class="p-6 text-xs text-brand-charcoal/80 leading-relaxed space-y-3">
+                        <p>
+                            To the fullest extent permitted by applicable law, HealthLife shall
+                            not be liable for any indirect, incidental, special, or consequential
+                            damages, including but not limited to financial losses, coverage
+                            disruptions, premium changes, or outcomes resulting from third-party
+                            provider decisions.
+                        </p>
+                        <p>
+                            <strong>Liability Cap:</strong> In all cases, HealthLife’s total
+                            cumulative liability arising from or related to any service, claim,
+                            or dispute shall be strictly limited to the exact amount paid by the
+                            Client for the specific service giving rise to the claim.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <!-- No Refund Policy -->
-        <div class="bg-white border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm">
-            <button class="w-full px-6 py-4 flex justify-between items-center font-bold text-brand-greenDark bg-slate-50 border-b border-brand-gold/10"
-                onclick="togglePolicy('refund')">
-                <span>2. Explicit No-Refund Policy</span>
-                <span id="icon-refund" class="text-xl font-mono">+</span>
-            </button>
-
-            <div id="content-refund" class="policy-content">
-                <div class="p-6 text-xs text-brand-charcoal/80 leading-relaxed space-y-3">
-                    <p>
-                        Due to the nature of our services — which include immediate access to
-                        proprietary materials, preparatory analysis, and real-time consulting
-                        resources upon booking — <strong>all purchases are final and
-                        non-refundable once confirmed</strong>.
-                    </p>
-                    <p>
-                        Clients are responsible for reviewing service descriptions carefully
-                        prior to purchase. Scheduling changes may be requested up to
-                        <strong>twenty-four (24) hours</strong> prior to the originally scheduled
-                        session by contacting support. Requests submitted after this window
-                        may not be accommodated.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Billing & Disputes -->
-        <div class="bg-white border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm">
-            <button class="w-full px-6 py-4 flex justify-between items-center font-bold text-brand-greenDark bg-slate-50 border-b border-brand-gold/10"
-                onclick="togglePolicy('billing')">
-                <span>3. Billing Inquiries & Payment Disputes</span>
-                <span id="icon-billing" class="text-xl font-mono">+</span>
-            </button>
-
-            <div id="content-billing" class="policy-content">
-                <div class="p-6 text-xs text-brand-charcoal/80 leading-relaxed space-y-3">
-                    <p>
-                        By completing a transaction, the Client represents that they are
-                        authorized to use the selected payment method and that all billing
-                        information provided is accurate and complete.
-                    </p>
-                    <p>
-                        Clients agree to make a good-faith effort to contact HealthLife
-                        directly regarding any billing questions or concerns prior to
-                        initiating a payment dispute through a payment processor or
-                        financial institution.
-                    </p>
-                    <p>
-                        HealthLife maintains detailed service records, transaction logs,
-                        delivery confirmations, and communication history to verify service
-                        fulfillment and billing accuracy.
-                    </p>
-                    <p>
-                        Nothing in this policy limits or waives any rights a Client may have
-                        under applicable payment processor policies or consumer protection
-                        laws.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Limitation of Liability -->
-        <div class="bg-white border border-brand-gold/20 rounded-2xl overflow-hidden shadow-sm">
-            <button class="w-full px-6 py-4 flex justify-between items-center font-bold text-brand-greenDark bg-slate-50 border-b border-brand-gold/10"
-                onclick="togglePolicy('liability')">
-                <span>4. Limitation of Liability</span>
-                <span id="icon-liability" class="text-xl font-mono">+</span>
-            </button>
-
-            <div id="content-liability" class="policy-content">
-                <div class="p-6 text-xs text-brand-charcoal/80 leading-relaxed space-y-3">
-                    <p>
-                        To the fullest extent permitted by applicable law, HealthLife shall
-                        not be liable for any indirect, incidental, special, or consequential
-                        damages, including but not limited to financial losses, coverage
-                        disruptions, premium changes, or outcomes resulting from third-party
-                        provider decisions.
-                    </p>
-                    <p>
-                        <strong>Liability Cap:</strong> In all cases, HealthLife’s total
-                        cumulative liability arising from or related to any service, claim,
-                        or dispute shall be strictly limited to the exact amount paid by the
-                        Client for the specific service giving rise to the claim.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>    </section>
+    </section>
 
     <footer class="bg-brand-charcoal text-white/60 text-xs py-8 text-center border-t border-white/10">
         <div class="max-w-7xl mx-auto px-6">
@@ -338,12 +415,8 @@
     <!-- Initialization and Interaction Scripts -->
     <script>
         if (window.paypal) {
+            // Initializing your primary standard checkout button
             paypal.HostedButtons({ hostedButtonId: "J9R9TRFANTSYA" }).render("#paypal-container-J9R9TRFANTSYA");
-            paypal.HostedButtons({ hostedButtonId: "BXQAN8JY42M8U" }).render("#paypal-container-BXQAN8JY42M8U");
-            paypal.HostedButtons({ hostedButtonId: "PP8UUY9KBMKDQ" }).render("#paypal-container-PP8UUY9KBMKDQ");
-            paypal.HostedButtons({ hostedButtonId: "87X7342DSCQTC" }).render("#paypal-container-87X7342DSCQTC");
-            paypal.HostedButtons({ hostedButtonId: "9GSZL9GFQ57TY" }).render("#paypal-container-9GSZL9GFQ57TY");
-            paypal.HostedButtons({ hostedButtonId: "JGA9SMXHNR9Y8" }).render("#paypal-container-JGA9SMXHNR9Y8");
         }
 
         function togglePayPalButton(pkg) { 
